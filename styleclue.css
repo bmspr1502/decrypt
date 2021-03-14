@@ -1,0 +1,49 @@
+#clue{
+    background-image: url("images/image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 754px;
+}
+.modal.show  {
+    display:flex!important;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+    align-items: flex-start;
+  }
+#q1{
+    position:absolute;
+    top: 100px;
+    left: 400px;
+}
+#q2{
+    position:absolute;
+    top: 410px;
+    left: 260px;
+}  
+#q3{
+    position:absolute;
+    top: 400px;
+    left: 800px;
+}
+#q4{
+    position:absolute;
+    top: 522px;
+    left: 1100px;
+}
+#q5{
+    position:absolute;
+    top: 150px;
+    left: 1100px;
+}
+#q6{
+    position:absolute;
+    top: 500px;
+    left: 1000px;
+}
+#q7{
+    position:absolute;
+    top: 400px;
+    left: 835px;
+}
