@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 13, 2021 at 08:09 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.3.14
+-- Host: localhost
+-- Generation Time: Mar 15, 2021 at 06:48 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `decrypit`
+-- Database: `decryptit`
 --
 
 -- --------------------------------------------------------
@@ -51,15 +50,16 @@ CREATE TABLE `userdata` (
   `kid` varchar(30) NOT NULL,
   `name` varchar(30) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `phone` varchar(15) NOT NULL
+  `phone` varchar(15) NOT NULL,
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `userdata`
 --
 
-INSERT INTO `userdata` (`kid`, `name`, `email`, `phone`) VALUES
-('abcd', 'TEST', 'test@gmail.com', '1234567890');
+INSERT INTO `userdata` (`kid`, `name`, `email`, `phone`, `password`) VALUES
+('abcd', 'TEST', 'test@gmail.com', '1234567890', '123456');
 
 --
 -- Indexes for dumped tables
