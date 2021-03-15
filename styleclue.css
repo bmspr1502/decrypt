@@ -29,8 +29,8 @@
 }
 #q4{
     position:absolute;
-    top: 522px;
-    left: 1100px;
+    top: 400px;
+    left: 1400px;
 }
 #q5{
     position:absolute;
@@ -39,11 +39,27 @@
 }
 #q6{
     position:absolute;
-    top: 500px;
-    left: 1000px;
+    top: 200px;
+    left: 800px;
 }
 #q7{
     position:absolute;
-    top: 400px;
-    left: 835px;
+    top: 600px;
+    left: 100px;
+}
+#q8{
+    position:absolute;
+    top: 600px;
+    left: 700px;
+}
+#q9{
+    position:absolute;
+    top: 500px;
+    left: 1100px;
+}
+.butt{
+    /*background-color: transparent; */
+    border:transparent;
+    height:50px;
+    width: 100px;
 }
