@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  echo $_SESSION["kid"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,6 +252,9 @@
   </div>
 </div>
 </div>
-
-
-</div>
+<button type="button" name="end" onclick="end()" class="btn-primary">Click to End!!</button>
+<script>
+  function end(){
+    window.location.href = 'end.php';
+  }
+</script>
