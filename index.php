@@ -139,7 +139,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question6</div>
+        <div><p>  *  </p></div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -179,7 +179,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Question       number</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
