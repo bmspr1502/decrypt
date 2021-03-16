@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question1</div>
+        <div>Write a program for error correction in digital communication</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -47,7 +47,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question2</div>
+        <div>Write a program to exchange all odd bits with even bits.(Note: input must be binary)</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -70,7 +70,12 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question3</div>
+        <div>Write a program to print
+            <div style="margin-left:50%">*</div>
+            <div style="margin-left:43%">* A *</div>
+            <div style="margin-left:37%">* A * B *</div>
+            <div style="margin-left:32%">* A * B * C *</div>
+        </div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -93,7 +98,31 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question4</div>
+        <div>Take any two numbers for ex: 18 12
+        <table>
+          <tr>
+            <td>18</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>6</td>
+          </tr>
+        </table>
+          take input from user and implement the opeation done above ,display only the final result.
+        </div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -116,7 +145,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question5</div>
+        <div>91% of the girls aged 10-18 years have experienced all types of harasement.Studies show that due to social expression and fear of retaliation the reported number is far leass than the real number.</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -139,7 +168,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div><p>  *  </p></div>
+        <div>Our teams are over run with emergencies and urgent requests.This means we have no time to innovate or to get the best from staff.If this continues, our competion will push us out of the market.</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -162,7 +191,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question7</div>
+        <div>The boarding protocols used by XYZ airlines should aim to get each flights passengers aboard the plane quickly and efficiently so that the plane can take off as soon as possible.</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -185,7 +214,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question8</div>
+        <div>All smart devices,uses our passwords,voice,touch ID etc and all of them are synced.How can we improve the security of data shared.</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
@@ -208,7 +237,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Question9</div>
+        <div>Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</div>
         <textarea id="1"></textarea>
       </div>
       <div class="modal-footer">
