@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('DB.php');
+include('functions/DB.php');
 $kid= $_POST['kid'];
 $password=$_POST['password'];
 $name = $_POST['name'];

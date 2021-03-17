@@ -1,6 +1,7 @@
 <?php
   session_start();
   echo $_SESSION["kid"];
+  $kid = $_SESSION["kid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +16,10 @@
   <link rel="stylesheet" href = "styleclue.css">
 </head>
 <body>
+
 <div id="clue">
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques1" id="q1"></button>
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(1)" data-target="#ques1" id="q1"></button>
 <div class="modal fade" id="ques1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -29,18 +31,20 @@
       </div>
       <div class="modal-body">
         <div>Write a program for error correction in digital communication</div>
-        <textarea id="1"></textarea>
+          <p id="error1" class="text-white text-center bg-danger"></p>
+          <p id="success1" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer1"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(1)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques2" id="q2"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(2)" data-target="#ques2" id="q2"></button><!--hidden-->
 <div class="modal fade" id="ques2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -52,18 +56,20 @@
       </div>
       <div class="modal-body">
         <div>Write a program to exchange all odd bits with even bits.(Note: input must be binary)</div>
-        <textarea id="1"></textarea>
+          <p id="error2" class="text-white text-center bg-danger"></p>
+          <p id="success2" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer2"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(2)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques3" id="q3"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(3)" data-target="#ques3" id="q3"></button><!--hidden-->
 <div class="modal fade" id="ques3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -80,18 +86,20 @@
             <div style="margin-left:37%">* A * B *</div>
             <div style="margin-left:32%">* A * B * C *</div>
         </div>
-        <textarea id="1"></textarea>
+          <p id="error3" class="text-white text-center bg-danger"></p>
+          <p id="success3" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer3"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(3)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques4" id="q4"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(4)" data-target="#ques4" id="q4"></button><!--hidden-->
 <div class="modal fade" id="ques4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -127,18 +135,20 @@
         </table>
           take input from user and implement the opeation done above ,display only the final result.
         </div>
-        <textarea id="1"></textarea>
+          <p id="error4" class="text-white text-center bg-danger"></p>
+          <p id="success4" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer4"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(4)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques5" id="q5"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(5)" data-target="#ques5" id="q5"></button><!--hidden-->
 <div class="modal fade" id="ques5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -150,18 +160,20 @@
       </div>
       <div class="modal-body">
         <div>91% of the girls aged 10-18 years have experienced all types of harasement.Studies show that due to social expression and fear of retaliation the reported number is far leass than the real number.</div>
-        <textarea id="1"></textarea>
+          <p id="error5" class="text-white text-center bg-danger"></p>
+          <p id="success5" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer5"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(5)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques6" id="q6"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(6)" data-target="#ques6" id="q6"></button><!--hidden-->
 <div class="modal fade" id="ques6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -173,18 +185,20 @@
       </div>
       <div class="modal-body">
         <div>Our teams are over run with emergencies and urgent requests.This means we have no time to innovate or to get the best from staff.If this continues, our competion will push us out of the market.</div>
-        <textarea id="1"></textarea>
+          <p id="error6" class="text-white text-center bg-danger"></p>
+          <p id="success6" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer6"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(6)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques7" id="q7"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(7)" data-target="#ques7" id="q7"></button><!--hidden-->
 <div class="modal fade" id="ques7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -196,18 +210,20 @@
       </div>
       <div class="modal-body">
         <div>The boarding protocols used by XYZ airlines should aim to get each flights passengers aboard the plane quickly and efficiently so that the plane can take off as soon as possible.</div>
-        <textarea id="1"></textarea>
+          <p id="error7" class="text-white text-center bg-danger"></p>
+          <p id="success7" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer7"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(7)" >Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques8" id="q8"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques8" id="q8"></button><!--hidden-->
 <div class="modal fade" id="ques8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -219,18 +235,20 @@
       </div>
       <div class="modal-body">
         <div>All smart devices,uses our passwords,voice,touch ID etc and all of them are synced.How can we improve the security of data shared.</div>
-        <textarea id="1"></textarea>
+          <p id="error8" class="text-white text-center bg-danger"></p>
+          <p id="success8" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer8"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(8)">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" data-target="#ques9" id="q9"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button><!--hidden-->
 <div class="modal fade" id="ques9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -242,11 +260,13 @@
       </div>
       <div class="modal-body">
         <div>Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</div>
-        <textarea id="1"></textarea>
+          <p id="error9" class="text-white text-center bg-danger"></p>
+          <p id="success9" class="text-white text-center bg-success"></p>
+          <textarea rows="5" class="form-control" id="answer9"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
+        <button type="button" class="btn btn-success" onclick="answer_update(9)">Save changes</button>
       </div>
     </div>
   </div>
@@ -254,7 +274,70 @@
 </div>
 <button type="button" name="end" onclick="end()" class="btn-primary">Click to End!!</button>
 <script>
+
+
+    var kid = '<?php echo $kid?>';
+
+    function checkkid(){
+        $.post('functions/checkkid.php', {
+            kid: kid
+        }, function (result) {
+            console.log(result);
+        });
+    }
+
+    $(document).ready(function (){
+        checkkid();
+    });
   function end(){
-    window.location.href = 'end.php';
+      $.get("end.php");
   }
+
+  function question_answered(){
+      $.post('numqnsans.php', {
+          kid: kid
+      }, function (result){
+          qnsans.html(result);
+      });
+  }
+
+  function text_load(answerid){
+      let answer = $("#answer"+answerid);
+      let error = $("#error"+answerid);
+      let success = $("#success"+answerid);
+
+      $.post('functions/textload.php', {
+          kid: kid,
+          answerid: answerid
+      }, function (result){
+          answer.val(result);
+          error.empty();
+          success.empty();
+      })
+  }
+
+  function answer_update(answerid){
+      let answer = $("#answer"+answerid);
+      let error = $("#error"+answerid);
+      let success = $("#success"+answerid);
+      console.log(answerid);
+
+      $.post('functions/updateanswer.php', {
+          answerid: answerid,
+          kid: kid,
+          answer: answer.val()
+      }, function (result){
+          if(result==='SUCCESS') {
+              error.empty();
+              success.html("Answer "+ answerid +" updated!");
+              //question_answered();
+          }else{
+              error.html(result);
+          }
+      });
+  }
+
+
 </script>
+</body>
+</html>

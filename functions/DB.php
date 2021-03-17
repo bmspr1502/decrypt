@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "decryptit";
+$database = "decrypit";
 
 $con = new mysqli($host, $user, $password, $database);
 
