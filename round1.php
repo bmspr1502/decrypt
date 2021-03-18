@@ -273,7 +273,7 @@
                 <p id="qnsans" class="nav-item text-white text-center"></p>
             </div>
             <div class="navbar-nav ml-auto">
-            <button type="button" name="end" onclick="location.href='end.php';" class="nav-item btn btn-success">End Quiz</button>
+            <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
             </div>
         </div>
     </nav>
@@ -284,16 +284,29 @@
 <script>
     var kid = "<?php echo $kid?>";
 
+    function checkround1(){
+        $.post('functions/checkround1.php', {
+            kid:kid
+        }, function (result){
+            if(result==='DONE'){
+                alert('Already attempted round1. Wait for result.');
+                window.location.href='thankyou.php';
+            }
+        })
+
+    }
+
 
     function checkkid(){
         $.post('functions/checkkid.php', {
             kid: kid
         }, function (result){
             console.log(result);
-        });
-    }
+            });
+        }
 
     $(document).ready(function (){
+        checkround1();
         checkkid();
         question_answered();
     });
