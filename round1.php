@@ -2,6 +2,7 @@
   session_start();
   //echo $_SESSION["kid"];
   $kid = $_SESSION["kid"];
+  //echo $kid;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,71 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href = "styleclue.css">
 </head>
-<script>
-    var kid = '<?php echo $kid?>';
 
-    function checkkid(){
-        $.post('functions/checkkid.php', {
-            kid: kid
-        }, function (result) {
-            console.log(result);
-        });
-    }
-
-    $(document).ready(function (){
-        checkkid();
-        question_answered();
-    });
-  function end(){
-      //$.get("end.php");
-      window.location.href: 'end.php';
-  }
-
-  function question_answered(){
-      let qnsans= $("#qnsans");
-      $.post('functions/numqnsans.php', {
-          kid: kid
-      }, function (result){
-          qnsans.html(result);
-      });
-  }
-
-  function text_load(answerid){
-      let answer = $("#answer"+answerid);
-      let error = $("#error"+answerid);
-      let success = $("#success"+answerid);
-
-      $.post('functions/textload.php', {
-          kid: kid,
-          answerid: answerid
-      }, function (result){
-          answer.val(result);
-          error.empty();
-          success.empty();
-      })
-  }
-
-  function answer_update(answerid){
-      let answer = $("#answer"+answerid);
-      let error = $("#error"+answerid);
-      let success = $("#success"+answerid);
-      console.log(answerid);
-
-      $.post('functions/updateanswer.php', {
-          answerid: answerid,
-          kid: kid,
-          answer: answer.val()
-      }, function (result){
-          if(result==='SUCCESS') {
-              error.empty();
-              success.html("Answer "+ answerid +" updated!");
-              question_answered();
-          }else{
-              error.html(result);
-          }
-      });
-  }
-</script>
 <body>
 <div id="clue">
 
@@ -344,4 +281,79 @@
 
 
 </body>
+<script>
+    var kid = "<?php echo $kid?>";
+
+
+    function checkkid(){
+        $.post('functions/checkkid.php', {
+            kid: kid
+        }, function (result){
+            console.log(result);
+        });
+    }
+
+    $(document).ready(function (){
+        checkkid();
+        question_answered();
+    });
+    function end(){
+        let error=$('#error');
+        //$.get("end.php");
+        $.post('end.php', {
+            kid:kid
+        }, function (result){
+            if(result==='Done'){
+                window.location.href = 'thankyou.php';
+            }else{
+
+            }
+        })
+    }
+
+    function question_answered(){
+        let qnsans= $("#qnsans");
+        $.post('functions/numqnsans.php', {
+            kid: kid
+        }, function (result){
+            qnsans.html();
+        });
+    }
+
+    function text_load(answerid){
+        let answer = $("#answer"+answerid);
+        let error = $("#error"+answerid);
+        let success = $("#success"+answerid);
+
+        $.post('functions/textload.php', {
+            kid: kid,
+            answerid: answerid
+        }, function (result){
+            answer.val(result);
+            error.empty();
+            success.empty();
+        })
+    }
+
+    function answer_update(answerid){
+        let answer = $("#answer"+answerid);
+        let error = $("#error"+answerid);
+        let success = $("#success"+answerid);
+        console.log(answerid);
+
+        $.post('functions/updateanswer.php', {
+            answerid: answerid,
+            kid: kid,
+            answer: answer.val()
+        }, function (result){
+            if(result==='SUCCESS') {
+                error.empty();
+                success.html("Answer "+ answerid +" updated!");
+                question_answered();
+            }else{
+                error.html(result);
+            }
+        });
+    }
+</script>
 </html>
