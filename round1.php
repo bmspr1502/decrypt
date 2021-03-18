@@ -1,6 +1,6 @@
 <?php
   session_start();
-  echo $_SESSION["kid"];
+  //echo $_SESSION["kid"];
   $kid = $_SESSION["kid"];
 ?>
 <!DOCTYPE html>
@@ -42,7 +42,6 @@
     </div>
   </div>
 </div>
-</div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(2)" data-target="#ques2" id="q2"></button><!--hidden-->
 <div class="modal fade" id="ques2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,7 +65,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(3)" data-target="#ques3" id="q3"></button><!--hidden-->
@@ -96,7 +94,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(4)" data-target="#ques4" id="q4"></button><!--hidden-->
@@ -146,7 +143,6 @@
     </div>
   </div>
 </div>
-</div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(5)" data-target="#ques5" id="q5"></button><!--hidden-->
 <div class="modal fade" id="ques5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -170,7 +166,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(6)" data-target="#ques6" id="q6"></button><!--hidden-->
@@ -196,7 +191,6 @@
     </div>
   </div>
 </div>
-</div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(7)" data-target="#ques7" id="q7"></button><!--hidden-->
 <div class="modal fade" id="ques7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -220,7 +214,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques8" id="q8"></button><!--hidden-->
@@ -246,7 +239,6 @@
     </div>
   </div>
 </div>
-</div>
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button><!--hidden-->
 <div class="modal fade" id="ques9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -271,13 +263,27 @@
     </div>
   </div>
 </div>
-<div>
-<button type="button" name="end" onclick="end()" class="btn-primary">Click to End!!</button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <?php echo $_SESSION["kid"]; ?>
+    </div>
+    <div class="col-sm">
+    <button type="button" name="end" onclick="end()" class="btn btn-warning" id="end">End Quiz</button>
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
 </div>
+
 </div>
+
+</body>
+</html>
+
 <script>
-
-
     var kid = '<?php echo $kid?>';
 
     function checkkid(){
@@ -338,8 +344,4 @@
           }
       });
   }
-
-
 </script>
-</body>
-</html>
