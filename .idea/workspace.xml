@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8ef0def-eca2-4b8a-8f04-daad95d3b4b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/numqnsans.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/numqnsans.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/round1.php" beforeDir="false" afterPath="$PROJECT_DIR$/round1.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +45,8 @@
       <updated>1615658265687</updated>
       <workItem from="1615658267275" duration="2909000" />
       <workItem from="1616000978219" duration="6326000" />
-      <workItem from="1616071590366" duration="2019000" />
+      <workItem from="1616071590366" duration="2554000" />
+      <workItem from="1616090086479" duration="4396000" />
     </task>
     <servers />
   </component>
