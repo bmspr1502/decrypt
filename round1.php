@@ -337,6 +337,7 @@
             </div>
             <div class="navbar-nav ml-auto">
             <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
+            <button type="button" name="end" onclick="location.href='end.php';" class="nav-item btn btn-success">End Quiz</button>
             </div>
         </div>
     </nav>
