@@ -1,343 +1,65 @@
-<?php
-  session_start();
-  echo $_SESSION["kid"];
-  $kid = $_SESSION["kid"];
-?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Decryptit | Round-1</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href = "styleclue.css">
+<!-- saved from url=(0059)https://preview.colorlib.com/theme/bootstrap/login-form-20/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Decryptit | Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="./login_files/css" rel="stylesheet">
+<link rel="stylesheet" href="./login_files/font-awesome.min.css">
+<link rel="stylesheet" href="./login_files/style.css">
+<link rel="stylesheet" href = "styleclue.css">
 </head>
+<!--<body class="img js-fullheight" style="background-image: url(images/image3.jpg); height: 754px;">-->
 <body>
-
-<div id="clue">
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(1)" data-target="#ques1" id="q1"></button>
-<div class="modal fade" id="ques1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Write a program for error correction in digital communication</div>
-          <p id="error1" class="text-white text-center bg-danger"></p>
-          <p id="success1" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer1"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(1)" >Save changes</button>
-      </div>
-    </div>
-  </div>
+    <video autoplay muted loop id="myVideo">
+        <source src="images/image4.mp4" type="video/mp4">
+    </video>
+<section class="ftco-section">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 text-center mb-5">
+<h2 class="heading-section">Decryptit</h2>
 </div>
 </div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(2)" data-target="#ques2" id="q2"></button><!--hidden-->
-<div class="modal fade" id="ques2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Write a program to exchange all odd bits with even bits.(Note: input must be binary)</div>
-          <p id="error2" class="text-white text-center bg-danger"></p>
-          <p id="success2" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer2"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(2)" >Save changes</button>
-      </div>
-    </div>
-  </div>
+<div class="row justify-content-center">
+<div class="col-md-6 col-lg-4">
+<div class="login-wrap p-0">
+<form action="check.php" method="POST">
+<div class="form-group">
+<input type="text" class="form-control" name="kid" placeholder="K! ID" required="">
 </div>
+<div class="form-group">
+<input type="text" class="form-control" name="name" placeholder="Name" required="">
+</div>
+<div class="form-group">
+<input type="text" class="form-control" name="phone" placeholder="Phone" required="">
+</div>
+<div class="form-group">
+<input type="email" class="form-control" name="email" placeholder="Email" required="">
+</div>
+<div class="form-group">
+<input type="password" class="form-control" name="password" placeholder="Password" required="">
+</div>
+<div class="form-group">
+<button type="submit" class="form-control btn btn-primary submit px-3">PLAY!!</button>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(3)" data-target="#ques3" id="q3"></button><!--hidden-->
-<div class="modal fade" id="ques3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Write a program to print
-            <div style="margin-left:50%">*</div>
-            <div style="margin-left:43%">* A *</div>
-            <div style="margin-left:37%">* A * B *</div>
-            <div style="margin-left:32%">* A * B * C *</div>
-        </div>
-          <p id="error3" class="text-white text-center bg-danger"></p>
-          <p id="success3" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer3"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(3)" >Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+</label>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(4)" data-target="#ques4" id="q4"></button><!--hidden-->
-<div class="modal fade" id="ques4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Take any two numbers for ex: 18 12
-        <table>
-          <tr>
-            <td>18</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>0</td>
-            <td>6</td>
-          </tr>
-        </table>
-          take input from user and implement the opeation done above ,display only the final result.
-        </div>
-          <p id="error4" class="text-white text-center bg-danger"></p>
-          <p id="success4" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer4"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(4)" >Save changes</button>
-      </div>
-    </div>
-  </div>
+</div>
+</form>
+
 </div>
 </div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(5)" data-target="#ques5" id="q5"></button><!--hidden-->
-<div class="modal fade" id="ques5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>91% of the girls aged 10-18 years have experienced all types of harasement.Studies show that due to social expression and fear of retaliation the reported number is far leass than the real number.</div>
-          <p id="error5" class="text-white text-center bg-danger"></p>
-          <p id="success5" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer5"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(5)" >Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
 </div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(6)" data-target="#ques6" id="q6"></button><!--hidden-->
-<div class="modal fade" id="ques6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Our teams are over run with emergencies and urgent requests.This means we have no time to innovate or to get the best from staff.If this continues, our competion will push us out of the market.</div>
-          <p id="error6" class="text-white text-center bg-danger"></p>
-          <p id="success6" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer6"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(6)" >Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
-</div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(7)" data-target="#ques7" id="q7"></button><!--hidden-->
-<div class="modal fade" id="ques7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>The boarding protocols used by XYZ airlines should aim to get each flights passengers aboard the plane quickly and efficiently so that the plane can take off as soon as possible.</div>
-          <p id="error7" class="text-white text-center bg-danger"></p>
-          <p id="success7" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer7"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(7)" >Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques8" id="q8"></button><!--hidden-->
-<div class="modal fade" id="ques8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question       number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>All smart devices,uses our passwords,voice,touch ID etc and all of them are synced.How can we improve the security of data shared.</div>
-          <p id="error8" class="text-white text-center bg-danger"></p>
-          <p id="success8" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer8"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(8)">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button><!--hidden-->
-<div class="modal fade" id="ques9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question number</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</div>
-          <p id="error9" class="text-white text-center bg-danger"></p>
-          <p id="success9" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer9"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(9)">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<button type="button" name="end" onclick="end()" class="btn-primary">Click to End!!</button>
-<script>
+</section>
+<script src="./login_files/jquery.min.js.download"></script>
+<script src="./login_files/popper.js.download"></script>
+<script src="./login_files/bootstrap.min.js.download"></script>
+<script src="./login_files/main.js.download"></script>
 
 
-    var kid = '<?php echo $kid?>';
-
-    function checkkid(){
-        $.post('functions/checkkid.php', {
-            kid: kid
-        }, function (result) {
-            console.log(result);
-        });
-    }
-
-    $(document).ready(function (){
-        checkkid();
-    });
-  function end(){
-      $.get("end.php");
-  }
-
-  function question_answered(){
-      $.post('numqnsans.php', {
-          kid: kid
-      }, function (result){
-          qnsans.html(result);
-      });
-  }
-
-  function text_load(answerid){
-      let answer = $("#answer"+answerid);
-      let error = $("#error"+answerid);
-      let success = $("#success"+answerid);
-
-      $.post('functions/textload.php', {
-          kid: kid,
-          answerid: answerid
-      }, function (result){
-          answer.val(result);
-          error.empty();
-          success.empty();
-      })
-  }
-
-  function answer_update(answerid){
-      let answer = $("#answer"+answerid);
-      let error = $("#error"+answerid);
-      let success = $("#success"+answerid);
-      console.log(answerid);
-
-      $.post('functions/updateanswer.php', {
-          answerid: answerid,
-          kid: kid,
-          answer: answer.val()
-      }, function (result){
-          if(result==='SUCCESS') {
-              error.empty();
-              success.html("Answer "+ answerid +" updated!");
-              //question_answered();
-          }else{
-              error.html(result);
-          }
-      });
-  }
-
-
-</script>
-</body>
-</html>
+</body></html>

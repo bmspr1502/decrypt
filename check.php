@@ -38,11 +38,11 @@ $result= mysqli_query($con, $sql1);
 $count = mysqli_num_rows($result);
 if($count == 1)
 {
-  echo "<script>window.location.href = 'index.php';</script>";
+  echo "<script>window.location.href = 'round1.php';</script>";
 }
 else {
   $sql = "INSERT INTO userdata (kid, name, email, phone, password,start) VALUES ('$kid', '$name', '$email', '$phone', '$password',CURRENT_TIMESTAMP())";
-  echo "<script>window.location.href = 'index.php';</script>";
+  echo "<script>window.location.href = 'round1.php';</script>";
   if(mysqli_query($con, $sql))
   {
     echo "New user inserted";
