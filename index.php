@@ -7,6 +7,23 @@
 <link href="./login_files/css" rel="stylesheet">
 <link rel="stylesheet" href="./login_files/font-awesome.min.css">
 <link rel="stylesheet" href="./login_files/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("form").on("submit", function(event){
+        event.preventDefault();
+
+        var formValues= $(this).serialize();
+
+        $.post("check.php", formValues, function(data){
+            // Display the returned data in browser
+            $("#result").html(data);
+        });
+    });
+});
+</script>
 <link rel="stylesheet" href = "styleclue.css">
 
 </head>
@@ -47,11 +64,13 @@
 <div class="form-group">
 <input type="email" class="form-control" name="email" placeholder="Email" required="">
 </div>
+<!--
 <div class="form-group">
 <input type="password" class="form-control" name="password" placeholder="Password" required="">
 </div>
+-->
 <div class="form-group">
-<button type="submit" class="form-control btn btn-primary submit px-3">PLAY!!</button>
+<button type="submit" class="form-control btn btn-primary submit px-3">PLAY!!!</button>
 </div>
 
 </label>
@@ -59,7 +78,7 @@
 
 </div>
 </form>
-
+<div id="result"></div>
 </div>
 </div>
 </div>
@@ -70,6 +89,4 @@
 <script src="./login_files/popper.js.download"></script>
 <script src="./login_files/bootstrap.min.js.download"></script>
 <script src="./login_files/main.js.download"></script>
-
-
 </body></html>

@@ -295,7 +295,8 @@
         question_answered();
     });
   function end(){
-      $.get("end.php");
+      //$.get("end.php");
+      window.location.href: 'end.php';
   }
 
   function question_answered(){
