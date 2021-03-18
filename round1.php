@@ -16,7 +16,7 @@
   <link rel="stylesheet" href = "styleclue.css">
 </head>
 <body>
-
+<p id="qnsans" class="text-white text-center bg-success"></p>
 <div id="clue">
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(1)" data-target="#ques1" id="q1"></button>
@@ -290,13 +290,15 @@
 
     $(document).ready(function (){
         checkkid();
+        question_answered();
     });
   function end(){
       $.get("end.php");
   }
 
   function question_answered(){
-      $.post('numqnsans.php', {
+      let qnsans= $("#qnsans");
+      $.post('functions/numqnsans.php', {
           kid: kid
       }, function (result){
           qnsans.html(result);
@@ -332,7 +334,7 @@
           if(result==='SUCCESS') {
               error.empty();
               success.html("Answer "+ answerid +" updated!");
-              //question_answered();
+              question_answered();
           }else{
               error.html(result);
           }
