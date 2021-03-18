@@ -316,7 +316,7 @@
         $.post('functions/numqnsans.php', {
             kid: kid
         }, function (result){
-            qnsans.html();
+            qnsans.html("No of qns answered by : "+kid+" is "+result+" of 9");
         });
     }
 
