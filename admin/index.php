@@ -15,11 +15,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="../images/logo.png" height="50" alt="Robotics">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+            <p class="nav-item text-white">DECRYPTIT</button>
+            </div>
+        </div>
+</nav>
   <table class="table table-dark table-striped">
   <thead>
   <br>
     <tr>
-    <th>NO</th>
+    <th>S NO</th>
     <th>K ID</th>
       <th>Name</th>
       <th>Email</th>
@@ -27,52 +38,37 @@
       <th>Start time</th>
       <th>End time</th>
       <th>Time elapsed</th>
-      <th>Answer1</th>
-      <th>Answer2</th>
-      <th>Answer3</th>
-      <th>Answer4</th>
-      <th>Answer5</th>
-      <th>Answer6</th>
-      <th>Answer7</th>
-      <th>Answer8</th>
-      <th>Answer9</th>
+      <th>Result</th>
     </tr>
   </thead>
   <tbody>
   <?php
   $i = 1;
-    while($row1 = mysqli_fetch_assoc($result1)){
+    while($row = mysqli_fetch_assoc($result1)){
     ?>
     <tr>
     <td><?php echo $i;?></td>
-      <td><?php echo $row1['kid'];?></td>
-      <td><?php echo $row1['name'];?></td>
-      <td><?php echo $row1['email'];?></td>
-      <td><?php echo $row1['phone'];?></td>
-      <td><?php echo $row1['start'];?></td>
-      <td><?php echo $row1['endtime'];?></td>
+      <td><?php echo $row['kid'];?></td>
+      <td><?php echo $row['name'];?></td>
+      <td><?php echo $row['email'];?></td>
+      <td><?php echo $row['phone'];?></td>
+      <td><?php echo $row['start'];?></td>
+      <td><?php echo $row['endtime'];?></td>
       <?php
-        $dteStart = new DateTime($row1['start']);
-        $dteEnd   = new DateTime($row1['endtime']);
+        $dteStart = new DateTime($row['start']);
+        $dteEnd   = new DateTime($row['endtime']);
         $dteDiff  = $dteStart->diff($dteEnd);?>
       <td><?php echo $dteDiff->format("%H:%I:%S");?></td>
-      <?php if($row2 = mysqli_fetch_assoc($result2)){?>
-      <td><?php echo $row2['answer1'];?></td>
-      <td><?php echo $row2['answer2'];?></td>
-      <td><?php echo $row2['answer3'];?></td>
-      <td><?php echo $row2['answer4'];?></td>
-      <td><?php echo $row2['answer5'];?></td>
-      <td><?php echo $row2['answer6'];?></td>
-      <td><?php echo $row2['answer7'];?></td>
-      <td><?php echo $row2['answer8'];?></td>
-      <td><?php echo $row2['answer9'];?></td>
-      
+      <form action = "result.php" method = "post">
+        <input type = "hidden" name = "kid" value ="<?php echo $row['kid'];?>">
+      <td><button type="submit" class="btn btn-warning" name = "view">View result</button></td>
+    </form>
     </tr>
     <?php
-      }
     $i++;
     }
     ?>
   </tbody>
 </table>
-</div>
+</body>
+</html>
