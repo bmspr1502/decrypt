@@ -2,19 +2,19 @@
 session_start();
 include('functions/DB.php');
 $kid= $_POST['kid'];
-$password=$_POST['password'];
+//$password=$_POST['password'];
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $_SESSION["kid"] = $kid;
 $_SESSION["phone"] = $phone;
 $kid = stripcslashes($kid);
-$password = stripcslashes($password);
+//$password = stripcslashes($password);
 $name = stripcslashes($name);
 $email = stripcslashes($email);
 $phone = stripcslashes($phone);
 $kid=mysqli_real_escape_string($con, $kid);
-$password = mysqli_real_escape_string($con,$password);
+//$password = mysqli_real_escape_string($con,$password);
 $name = mysqli_real_escape_string($con,$name);
 $email = mysqli_real_escape_string($con,$email);
 $phone = mysqli_real_escape_string($con,$phone);
@@ -41,7 +41,7 @@ if($count == 1)
   echo "<script>window.location.href = 'round1.php';</script>";
 }
 else {
-  $sql = "INSERT INTO userdata (kid, name, email, phone, password,start) VALUES ('$kid', '$name', '$email', '$phone', '$password',CURRENT_TIMESTAMP())";
+  $sql = "INSERT INTO userdata (kid, name, email, phone, start) VALUES ('$kid', '$name', '$email', '$phone', CURRENT_TIMESTAMP())";
   echo "<script>window.location.href = 'round1.php';</script>";
   if(mysqli_query($con, $sql))
   {

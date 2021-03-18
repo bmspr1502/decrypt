@@ -270,7 +270,8 @@
     <?php echo $_SESSION["kid"]; ?>
     </div>
     <div class="col-sm">
-    <button type="button" name="end" onclick="end()" class="btn btn-warning" id="end">End Quiz</button>
+    <!--<button type="button" name="end" onclick="onclick="window.location.href='end.php'"" class="btn btn-warning" id="end">End Quiz</button>-->
+    <a href="end.php"><input type="button" name="submit" value="submit"></a>
     </div>
     <div class="col-sm">
       One of three columns
@@ -299,7 +300,8 @@
         question_answered();
     });
   function end(){
-      $.get("end.php");
+      //$.get("end.php");
+      window.location.href: 'end.php';
   }
 
   function question_answered(){
