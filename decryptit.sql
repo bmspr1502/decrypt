@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2021 at 08:02 PM
+-- Generation Time: Mar 18, 2021 at 02:29 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -48,7 +48,8 @@ CREATE TABLE `round1` (
 
 INSERT INTO `round1` (`kid`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`, `answer8`, `answer9`, `totscore`) VALUES
 ('abcd', 'adsfa', 'wrtwrtwer\nasdfa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('abcde', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'asdfasdfas\nasdfasdf\nasdf\nasd', NULL);
+('abcde', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'asdfasdfas\nasdfasdf\nasdf\nasd', NULL),
+('k1234', NULL, '', NULL, NULL, '', 'asdfasdf', 'asdfasd', NULL, 'abcd', NULL);
 
 -- --------------------------------------------------------
 
@@ -76,6 +77,7 @@ INSERT INTO `userdata` (`kid`, `name`, `email`, `phone`, `password`, `start`, `e
 ('abcdef', 'Preeti krishnaveni', 'bmspr1502@gmail.com', '9440167956', '1234', '2021-03-16 21:41:28', '2021-03-16 22:25:32'),
 ('helo', 'Preeti krishnaveni', 'bmspr1502@gmail.com', '2414', '1231314', '2021-03-16 22:15:58', '2021-03-16 22:25:32'),
 ('hey', 'Preeti krishnaveni', 'bmspr1502@gmail.com', '2414', 'adf', '2021-03-16 22:19:34', '2021-03-16 22:25:32'),
+('k1234', 'PRANAVA RAMAN B M S', 'bmspr1502@gmail.com', '09443501317', '1234', '2021-03-18 13:17:35', '2021-03-18 13:17:35'),
 ('yoyo', 'asdfafga', 'bmspr1502@gmail.com', '2414', 'asdlfkj', '2021-03-16 22:32:02', '2021-03-16 22:32:02'),
 ('yoyoi', 'asdfafga', 'bmspr1502@gmail.com', '2414', 'asdfag', '2021-03-16 22:33:03', '2021-03-16 22:33:03');
 
