@@ -8,17 +8,27 @@
 <link rel="stylesheet" href="./login_files/font-awesome.min.css">
 <link rel="stylesheet" href="./login_files/style.css">
 <link rel="stylesheet" href = "styleclue.css">
+
 </head>
 <!--<body class="img js-fullheight" style="background-image: url(images/image3.jpg); height: 754px;">-->
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="images/image4.mp4" type="video/mp4">
     </video>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="images/logo.png" height="50" alt="Robotics">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+            <p class="nav-item text-white">DECRYPTIT</button>
+            </div>
+        </div>
+    </nav>
 <section class="ftco-section">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-6 text-center mb-5">
-<h2 class="heading-section">Decryptit</h2>
 </div>
 </div>
 <div class="row justify-content-center">

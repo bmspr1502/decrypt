@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
+    height: 753px;
 }
 .modal.show  {
     display:flex!important;
@@ -75,4 +75,4 @@
 }
 table, tr, td {
     border: 1px solid black;
-  }
+}

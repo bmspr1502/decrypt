@@ -16,7 +16,6 @@
   <link rel="stylesheet" href = "styleclue.css">
 </head>
 <body>
-<p id="qnsans" class="text-white text-center bg-success"></p>
 <div id="clue">
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(1)" data-target="#ques1" id="q1"></button>
@@ -263,23 +262,20 @@
     </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-    <?php echo $_SESSION["kid"]; ?>
-    </div>
-    <div class="col-sm">
-    <button type="button" name="end" onclick="end()" class="btn btn-warning" id="end">End Quiz</button>
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="images/logo.png" height="50" alt="Robotics">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <p id="qnsans" class="nav-item text-white text-center"></p>
+            </div>
+            <div class="navbar-nav ml-auto">
+            <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
+            </div>
+        </div>
+    </nav>
 </div>
-
-</div>
-
 </body>
 </html>
 
