@@ -73,7 +73,7 @@ $(document).ready(function(){
 <button type="submit" class="form-control btn btn-primary submit px-3">PLAY!!!</button>
 </div>
 
-</label>
+
 </div>
 
 </div>

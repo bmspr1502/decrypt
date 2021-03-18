@@ -23,7 +23,7 @@ if(isset($_POST['kid'])) {
                 if ($length[$i] > 0)
                     $answered++;
             }
-            echo "No. of questions answered : ".$answered . " out of 9";
+            echo $answered;
         }else{
             echo "NO ELEMENTS FOUND";
         }
