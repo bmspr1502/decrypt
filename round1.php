@@ -272,6 +272,7 @@
             <div class="navbar-nav">
                 <p id="qnsans" class="nav-item text-white text-center"></p>
             </div>
+            <h2 class = "text-white" style = "margin-left:300px">DECRYPTIT</h2>
             <div class="navbar-nav ml-auto">
             <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
             </div>
