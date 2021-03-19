@@ -16,11 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $sql1= "SELECT * FROM userdata WHERE kid='$kid'";
   $result= $con->query($sql1);
   $count = $result->num_rows;
-  if($count == 1)
-  {
+  if($count == 1){
     $_SESSION["kid"] = $kid;
     $_SESSION["phone"] = $phone;
-    header("location: round1.php");
+    echo "<script>window.location.href='round1.php'</script>";
   }
   else {
     $sql = "INSERT INTO userdata (kid, name, email, phone, start) VALUES ('$kid', '$name', '$email', '$phone', CURRENT_TIMESTAMP())";
@@ -29,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       echo "New user inserted";
       $_SESSION["kid"] = $kid;
       $_SESSION["phone"] = $phone;
-      header("location: round1.php");
+      echo "<script>window.location.href='round1.php'</script>";
     } else {
       echo "Error: " . $sql . "<br>" . $con->error;
     }
