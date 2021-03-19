@@ -16,6 +16,7 @@ $(document).ready(function(){
         event.preventDefault();
 
         var formValues= $(this).serialize();
+        console.log(formValues);
 
         $.post("check.php", formValues, function(data){
             // Display the returned data in browser
