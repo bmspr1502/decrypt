@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <?php
-    include "../functions/DB.php";
+    include "connection.php";
     $query1 = "SELECT * FROM userdata";
     $query2 = "SELECT * FROM round1";
     $result1 = mysqli_query($con,$query1);
