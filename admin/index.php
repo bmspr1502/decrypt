@@ -2,10 +2,11 @@
 <html>
     <?php
     include "../functions/DB.php";
-    $query1 = "SELECT * FROM userdata";
-    $query2 = "SELECT * FROM round1";
-    $result1 = mysqli_query($con,$query1);
-    $result2 = mysqli_query($con,$query2);
+    $query1 = "SELECT * FROM userdata INNER JOIN round1 ON userdata.kid = round1.kid";
+    if(!($result1 = $con->query($query1))){
+        die($con->error);
+    }
+
     ?>
 <head>
 <meta charset="utf-8">
@@ -20,7 +21,7 @@
         <a href="#" class="navbar-brand">
             <img src="../images/logo.png" height="50" alt="Robotics">
         </a>
-        <h2 class = "text-white" style = "margin-left:590px">DECRYPTIT</h2>
+        <h2 class = "text-white" style = "margin-left:590px">DECRYPTIT - ADMIN CONSOLE</h2>
 </nav>
   <table class="table table-dark table-striped">
   <thead>
@@ -34,6 +35,8 @@
       <th>Start time</th>
       <th>End time</th>
       <th>Time elapsed</th>
+        <th>Round1 Score</th>
+        <th>Selected - R2</th>
       <th>Result</th>
     </tr>
   </thead>
@@ -41,6 +44,7 @@
   <?php
   $i = 1;
     while($row = mysqli_fetch_assoc($result1)){
+        //print_r($row);
     ?>
     <tr>
     <td><?php echo $i;?></td>
@@ -55,6 +59,13 @@
         $dteEnd   = new DateTime($row['endtime']);
         $dteDiff  = $dteStart->diff($dteEnd);?>
       <td><?php echo $dteDiff->format("%H:%I:%S");?></td>
+        <td><?php if(isset($row['totscore']))echo $row['totscore'];?></td>
+        <td><?php if($row['selected']){
+                echo "<p class='bg-success text-white'>Selected</p>";
+            }else{
+                echo "<p class='bg-danger text-white'>Not Selected</p>";
+            }?></td>
+
       <form action = "result.php" method = "post">
         <input type = "hidden" name = "kid" value ="<?php echo $row['kid'];?>">
       <td><button type="submit" class="btn btn-warning" name = "view">View result</button></td>

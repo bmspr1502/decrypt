@@ -1,7 +1,8 @@
 <?php
   session_start();
   //echo $_SESSION["kid"];
-  $kid = $_SESSION["kid"];
+  if(isset($_SESSION['kid'])){
+      $kid = $_SESSION['kid'];
   //echo $kid;
 ?>
 <!DOCTYPE html>
@@ -293,7 +294,7 @@
                 alert('Already attempted round1. Wait for result.');
                 window.location.href='thankyou.php';
             }
-        })
+        });
 
     }
 
@@ -371,3 +372,8 @@
     }
 </script>
 </html>
+<?php
+  }else{
+      echo '<script>alert("Login to attempt.");';
+      echo "window.location.href = 'index.php';</script>";
+  }

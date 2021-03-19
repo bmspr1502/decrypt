@@ -5,8 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/result.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decrypit.sql" beforeDir="false" afterPath="$PROJECT_DIR$/decrypit.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/round1.php" beforeDir="false" afterPath="$PROJECT_DIR$/round1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thankyou.php" beforeDir="false" afterPath="$PROJECT_DIR$/thankyou.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
       <workItem from="1616000978219" duration="6326000" />
       <workItem from="1616071590366" duration="2554000" />
       <workItem from="1616090086479" duration="7698000" />
-      <workItem from="1616151583227" duration="2698000" />
+      <workItem from="1616151583227" duration="6552000" />
     </task>
     <servers />
   </component>

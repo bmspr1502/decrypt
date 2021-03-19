@@ -5,8 +5,8 @@ if(isset($_POST["view"])){
     include "../functions/DB.php";
     $kid = $con->real_escape_string($_POST['kid']);
     $query = "SELECT * FROM round1 WHERE kid = '$kid'";
-    $result = $con->query($query);
-    if($row = $result->fetch_assoc()){
+    if($result = $con->query($query)){
+        if($row = $result->fetch_assoc()){
 ?>
 <head>
 <meta charset="utf-8">
@@ -19,13 +19,14 @@ if(isset($_POST["view"])){
 <body>
 
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
-        <a href="#" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
             <img src="../images/logo.png" height="50" alt="Robotics">
         </a>
-        <h2 class = "text-white" style = "margin-left:590px">DECRYPTIT</h2>
+        <h2 class = "text-white" style = "margin-left:400px">DECRYPTIT - ADMIN CONSOLE</h2>
 </nav>
 <br>
-
+<a class="btn btn-outline-success" href="index.php">Go Back</a>
+<div class="text-center"><strong><h2><?php echo $row['kid']; ?>'s Response</h2></strong></div>
 <p id="result"></p>
 <div class = "container">
     <p class = "text-white bg-dark">1. Write a program for error correction in digital communication</p><br>
@@ -75,11 +76,11 @@ if(isset($_POST["view"])){
     <pre><?php echo $row['answer8'];?></pre><br>
     <p class = "text-white bg-dark">9. Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</p><br>
     <pre><?php echo $row['answer9'];?></pre><br>
-    <p class = "text-white bg-dark">Total score</p><br>
+    <p class = "text-white bg-success">Total score</p><br>
     <form action = "process.php" method = "post">
     <input type = "number" name = "score" id = "score" value="<?php echo $row['totscore']; ?>" required><br><br>
     <input type = "hidden" name = "kid" id = "kid" value = "<?php echo $kid?>">
-    <p class = "text-white bg-dark">Selected</p><br>
+    <p class = "text-white bg-info">Selected</p><br>
     <label class="container">Yes
         <input type="radio" name="selected" id= "selected" value="1" required <?php if($row['selected']==1)
             echo "checked"?>>
@@ -95,7 +96,13 @@ if(isset($_POST["view"])){
     </form>
 </div>
     <?php
-}
+}else{
+        echo '<script>alert("Not Yet Attempted");';
+        echo "window.location.href = 'index.php';</script>";
+    }
+    }else{
+        echo $con->error;
+    }
 }
 else{
     echo '<script>alert("Accessed denied");';
@@ -113,6 +120,9 @@ $(document).ready(function(){
 
         $.post("process.php", formValues, function(data){
             alert(data);
+            if(data==='Score updated'){
+                window.location.href='index.php';
+            }
         });
     });
 });
