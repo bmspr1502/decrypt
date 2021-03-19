@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <?php
-if(isset($_POST["view"]))
-{
-    include "connection.php";
-    $kid = $_POST['kid'];
+<?php
+if(isset($_POST["view"])){
+    include "../functions/DB.php";
+    $kid = $con->real_escape_string($_POST['kid']);
     $query = "SELECT * FROM round1 WHERE kid = '$kid'";
-    $result = mysqli_query($con,$query);
-    if($row = mysqli_fetch_assoc($result)){
+    $result = $con->query($query);
+    if($row = $result->fetch_assoc()){
 ?>
 <head>
 <meta charset="utf-8">
@@ -18,6 +17,19 @@ if(isset($_POST["view"]))
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+<script>
+$(document).ready(function(){
+    $("form").on("submit", function(event){
+        event.preventDefault();
+
+        var formValues= $(this).serialize();
+
+        $.post("process.php", formValues, function(data){
+            $("#result").html(data);
+        });
+    });
+});
+</script>
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
             <img src="../images/logo.png" height="50" alt="Robotics">
@@ -50,10 +62,21 @@ if(isset($_POST["view"]))
     <span class = "text-white bg-dark">Answer9</span><br>
     <pre><?php echo $row['answer9'];?></pre><br>
     <span class = "text-white bg-dark">Total score</span><br>
-    <input type = "text" name = "score">
-    <button type="submit" class="btn btn-success" name = "view">Save score</button><br>
+    <form action = "process.php" method = "post">
+    <input type = "text" name = "score" id = "score" required><br><br>
+    <inpu type = "hidden" name = "kid" id = "kid" value = "<?php echo $kid?>">
     <span class = "text-white bg-dark">Selected</span><br>
-    <button type="submit" class="btn btn-danger" name = "view">Selected</button>
+    <label class="container">Yes
+        <input type="radio" name="selected" id= "selected"required>
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">No
+        <input type="radio" name="selected" id= "selected" required>
+        <span class="checkmark"></span>
+    </label>
+    <button type="submit" class="btn btn-dark" name = "submit">Save result</button><br><br>
+    <br><br><br>
+    </form>
 </div>
     <?php
 }
