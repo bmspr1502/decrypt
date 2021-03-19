@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <?php
-if(isset($_POST["view"]))
-{
-    include "connection.php";
-    $kid = $_POST['kid'];
+<?php
+if(isset($_POST["view"])){
+    include "../functions/DB.php";
+    $kid = $con->real_escape_string($_POST['kid']);
     $query = "SELECT * FROM round1 WHERE kid = '$kid'";
-    $result = mysqli_query($con,$query);
-    if($row = mysqli_fetch_assoc($result)){
+    $result = $con->query($query);
+    if($row = $result->fetch_assoc()){
 ?>
 <head>
 <meta charset="utf-8">
@@ -18,6 +17,7 @@ if(isset($_POST["view"]))
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
             <img src="../images/logo.png" height="50" alt="Robotics">
@@ -30,6 +30,7 @@ if(isset($_POST["view"]))
 </nav>
 <br>
 
+<p id="result"></p>
 <div class = "container">
     <span class = "text-white bg-dark">Answer1</span><br>
     <pre><?php echo $row['answer1'];?></pre><br>
@@ -50,10 +51,23 @@ if(isset($_POST["view"]))
     <span class = "text-white bg-dark">Answer9</span><br>
     <pre><?php echo $row['answer9'];?></pre><br>
     <span class = "text-white bg-dark">Total score</span><br>
-    <input type = "text" name = "score">
-    <button type="submit" class="btn btn-success" name = "view">Save score</button><br>
+    <form action = "process.php" method = "post">
+    <input type = "number" name = "score" id = "score" value="<?php echo $row['totscore']; ?>" required><br><br>
+    <input type = "hidden" name = "kid" id = "kid" value = "<?php echo $kid?>">
     <span class = "text-white bg-dark">Selected</span><br>
-    <button type="submit" class="btn btn-danger" name = "view">Selected</button>
+    <label class="container">Yes
+        <input type="radio" name="selected" id= "selected" value="1" required <?php if($row['selected']==1)
+            echo "checked"?>>
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">No
+        <input type="radio" name="selected" id= "selected" value="0" required <?php if($row['selected']==0)
+            echo "checked"?>>
+        <span class="checkmark"></span>
+    </label>
+    <input type="submit" class="btn btn-dark" name = "submit" >
+    <br><br><br>
+    </form>
 </div>
     <?php
 }
@@ -63,3 +77,20 @@ else{
    echo "window.location.href = 'log_admin.php';</script>";
 }
 ?>
+
+<script>
+$(document).ready(function(){
+    $("form").on("submit", function(event){
+        event.preventDefault();
+
+        var formValues= $(this).serialize();
+        console.log(formValues);
+
+        $.post("process.php", formValues, function(data){
+            alert(data);
+        });
+    });
+});
+</script>
+</body>
+</html>
