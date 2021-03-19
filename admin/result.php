@@ -17,19 +17,7 @@ if(isset($_POST["view"])){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<script>
-$(document).ready(function(){
-    $("form").on("submit", function(event){
-        event.preventDefault();
 
-        var formValues= $(this).serialize();
-
-        $.post("process.php", formValues, function(data){
-            $("#result").html(data);
-        });
-    });
-});
-</script>
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
             <img src="../images/logo.png" height="50" alt="Robotics">
@@ -42,6 +30,7 @@ $(document).ready(function(){
 </nav>
 <br>
 
+<p id="result"></p>
 <div class = "container">
     <span class = "text-white bg-dark">Answer1</span><br>
     <pre><?php echo $row['answer1'];?></pre><br>
@@ -63,18 +52,20 @@ $(document).ready(function(){
     <pre><?php echo $row['answer9'];?></pre><br>
     <span class = "text-white bg-dark">Total score</span><br>
     <form action = "process.php" method = "post">
-    <input type = "text" name = "score" id = "score" required><br><br>
-    <inpu type = "hidden" name = "kid" id = "kid" value = "<?php echo $kid?>">
+    <input type = "number" name = "score" id = "score" value="<?php echo $row['totscore']; ?>" required><br><br>
+    <input type = "hidden" name = "kid" id = "kid" value = "<?php echo $kid?>">
     <span class = "text-white bg-dark">Selected</span><br>
     <label class="container">Yes
-        <input type="radio" name="selected" id= "selected"required>
+        <input type="radio" name="selected" id= "selected" value="1" required <?php if($row['selected']==1)
+            echo "checked"?>>
         <span class="checkmark"></span>
     </label>
     <label class="container">No
-        <input type="radio" name="selected" id= "selected" required>
+        <input type="radio" name="selected" id= "selected" value="0" required <?php if($row['selected']==0)
+            echo "checked"?>>
         <span class="checkmark"></span>
     </label>
-    <button type="submit" class="btn btn-dark" name = "submit">Save result</button><br><br>
+    <input type="submit" class="btn btn-dark" name = "submit" >
     <br><br><br>
     </form>
 </div>
@@ -86,3 +77,20 @@ else{
    echo "window.location.href = 'log_admin.php';</script>";
 }
 ?>
+
+<script>
+$(document).ready(function(){
+    $("form").on("submit", function(event){
+        event.preventDefault();
+
+        var formValues= $(this).serialize();
+        console.log(formValues);
+
+        $.post("process.php", formValues, function(data){
+            alert(data);
+        });
+    });
+});
+</script>
+</body>
+</html>
