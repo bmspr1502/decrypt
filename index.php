@@ -37,11 +37,7 @@ $(document).ready(function(){
         <a href="#" class="navbar-brand">
             <img src="images/logo.png" height="50" alt="Robotics">
         </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ml-auto">
-            <p class="nav-item text-white">DECRYPTIT</button>
-            </div>
-        </div>
+        <h2 class = "text-white font-weight-bold" style = "margin-left:590px">DECRYPTIT</h2>
     </nav>
 <section class="ftco-section">
 <div class="container">
