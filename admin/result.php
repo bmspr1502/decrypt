@@ -23,7 +23,7 @@ if(isset($_POST["view"])){
             <img src="../images/logo.png" height="50" alt="Robotics">
         </a>
         <h2 class = "text-white" style = "margin-left:400px">DECRYPTIT - ADMIN CONSOLE</h2>
-        <a class="btn btn-success" href="index.php" style = "margin-left:450px">Go Back</a>
+        <a class="btn btn-success" href="adminconsole.php" style = "margin-left:450px">Go Back</a>
 </nav>
 <br>
 <div class="text-center"><strong><h2><?php echo $row['kid']; ?>'s Response</h2></strong></div>
