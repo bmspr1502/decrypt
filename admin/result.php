@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <?php
@@ -106,7 +107,7 @@ if(isset($_POST["view"])){
 }
 else{
     echo '<script>alert("Accessed denied");';
-   echo "window.location.href = 'log_admin.php';</script>";
+   echo "window.location.href = 'index.php';</script>";
 }
 ?>
 

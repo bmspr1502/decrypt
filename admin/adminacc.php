@@ -5,8 +5,8 @@ session_start();
     $password = stripcslashes($_POST["password"]);
     if($username == "admin" AND $password == "decrypt123")
     {
-      $_SESSION['admin']=true;
-
+      $_SESSION['admin']=1;
+      echo "SUCCESSFUL";
       echo "<script>window.location.href='adminconsole.php'</script>";
     }
     else {
