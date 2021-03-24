@@ -5,9 +5,15 @@
       $kid = $_SESSION['kid'];
   //echo $kid;
   include "functions/DB.php";
-  $query = "SELECT * FROM userdata WHERE kid = $kid";
-  $result = $con->query($query);
-  $row = mysqli_fetch_assoc($result);
+  $query = "SELECT * FROM userdata WHERE kid = '$kid'";
+  if($result = $con->query($query)){
+      $row = $result->fetch_assoc();
+  }else{
+      echo $con->error;
+  }
+
+
+  //$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -292,25 +298,21 @@
 var start = '<?php echo $row['start'];?>';
 var startTime = new Date(start);
 function updateClock(){
- 	var currentTime = new Date ();
-   var elapsedTime = new Date(currentTime - startTime);
-  	var currentHours = currentTime.getHours ();
-  	var currentMinutes = currentTime.getMinutes ();
-  	var currentSeconds = currentTime.getSeconds ();
-  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-  	//var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
-    //$("#clock").html(currentTimeString);
-    //timeela = elapsedTime/3600000;
-    console.log(elapsedTime);
-    //$dteStart = new DateTime($row['start']);
-    //php $dteDiff  = $dteStart->diff(currentTimeString);?>
+ 	let currentTime = new Date ();
+   let elapsedTime = currentTime - startTime;
+   let elapsedSec = Math.floor(elapsedTime/1000);
+   let elapsedMin = Math.floor(elapsedSec/60);
+   let elapsedHr = Math.floor(elapsedMin/60);
+   elapsedSec = elapsedSec%60;
+   elapsedMin = elapsedMin%60;
+
+    elapsedSec = ( elapsedSec < 10 ? "0" : "" ) + elapsedSec;
+    elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
+    elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
+
+   let elapsedString = elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
    
-   	//$("#clock").html(//php echo $dteDiff?>);
-     $("#clock").html(currentTimeString-start);
+   	$("#clock").html(elapsedString);
 
    	  	
  }
