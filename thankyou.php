@@ -9,15 +9,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style media="screen">
-      body{
+      /*body{
         background-image: url('images/thankyouimg.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
-      }
-
+      }*/
+      #myVideo {
+      position: fixed;
+      background-repeat: no-repeat;
+      /*background-size: cover;*/
+    }
       .dabba{
         margin-left: 25em;
-        margin-top: 12em;
+        /*margin-top: 12em;*/
         margin-right: 25em;
         background-color: black;
         padding: 5%;
@@ -49,6 +53,9 @@
     </style>
   </head>
   <body>
+  <video autoplay muted loop id="myVideo">
+        <source src="images/image4.mp4" type="video/mp4">
+    </video>
     <!--
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
@@ -78,6 +85,5 @@
 
 
     </div>
-  </div>
   </body>
 </html>
