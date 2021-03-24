@@ -1,10 +1,13 @@
-
-
+<?php
+session_start();
+if(isset($_SESSION['admin'])){
+    if($_SESSION['admin']==1){
+       ?>
 <!DOCTYPE html>
 <html>
 <?php
 include "../functions/DB.php";
-$query1 = "SELECT * FROM userdata INNER JOIN round1 ON userdata.kid = round1.kid";
+$query1 = "SELECT * FROM userdata INNER JOIN round1 ON userdata.kid = round1.kid ORDER BY start DESC";
 if(!($result1 = $con->query($query1))){
     die($con->error);
 }
@@ -24,6 +27,7 @@ if(!($result1 = $con->query($query1))){
         <img src="../images/logo.png" height="50" alt="Robotics">
     </a>
     <h2 class = "text-white" style = "margin-left:450px">DECRYPTIT - ADMIN CONSOLE</h2>
+    <a class="btn btn-danger" href="logout.php" style = "margin-left:450px">Logout</a>
 </nav>
 <table class="table table-dark table-striped">
     <thead>
@@ -81,3 +85,14 @@ if(!($result1 = $con->query($query1))){
 </table>
 </body>
 </html>
+
+        <?php
+    }else {
+        echo '<script>alert("Accessed denied");</script>';
+        header('location: index.php');
+    }
+}else {
+    echo '<script>alert("Accessed denied");</script>';
+    header('location: index.php');
+}
+?>
