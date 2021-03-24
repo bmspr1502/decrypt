@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+if(isset($_SESSION['admin'])){
+if($_SESSION['admin']==1){
+?>
 <!DOCTYPE html>
 <html>
 <?php
@@ -7,6 +11,7 @@ if(isset($_POST["view"])){
     $kid = $con->real_escape_string($_POST['kid']);
     $query = "SELECT * FROM round1 WHERE kid = '$kid'";
     if($result = $con->query($query)){
+
         if($row = $result->fetch_assoc()){
 ?>
 <head>
@@ -24,6 +29,7 @@ if(isset($_POST["view"])){
             <img src="../images/logo.png" height="50" alt="Robotics">
         </a>
         <h2 class = "text-white" style = "margin-left:400px">DECRYPTIT - ADMIN CONSOLE</h2>
+
         <a class="btn btn-success" href="adminconsole.php" style = "margin-left:450px">Go Back</a>
 </nav>
 <br>
@@ -122,7 +128,7 @@ $(document).ready(function(){
         $.post("process.php", formValues, function(data){
             alert(data);
             if(data==='Score updated'){
-                window.location.href='index.php';
+                window.location.href='adminconsole.php';
             }
         });
     });
@@ -130,3 +136,14 @@ $(document).ready(function(){
 </script>
 </body>
 </html>
+
+    <?php
+}else {
+    echo '<script>alert("Accessed denied");</script>';
+    header('location: index.php');
+}
+}else {
+    echo '<script>alert("Accessed denied");</script>';
+    header('location: index.php');
+}
+?>

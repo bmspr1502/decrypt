@@ -4,6 +4,16 @@
   if(isset($_SESSION['kid'])){
       $kid = $_SESSION['kid'];
   //echo $kid;
+  include "functions/DB.php";
+  $query = "SELECT * FROM userdata WHERE kid = '$kid'";
+  if($result = $con->query($query)){
+      $row = $result->fetch_assoc();
+  }else{
+      echo $con->error;
+  }
+
+
+  //$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -307,16 +317,37 @@
                 </div>
               </div>
             </div>
+            <p id = "clock" class="nav-item text-white text-center"></p>
             <div class="navbar-nav ml-auto">
             <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
             </div>
         </div>
     </nav>
 </div>
-
-
 </body>
 <script>
+var start = '<?php echo $row['start'];?>';
+var startTime = new Date(start);
+function updateClock(){
+ 	let currentTime = new Date ();
+   let elapsedTime = currentTime - startTime;
+   let elapsedSec = Math.floor(elapsedTime/1000);
+   let elapsedMin = Math.floor(elapsedSec/60);
+   let elapsedHr = Math.floor(elapsedMin/60);
+   elapsedSec = elapsedSec%60;
+   elapsedMin = elapsedMin%60;
+
+    elapsedSec = ( elapsedSec < 10 ? "0" : "" ) + elapsedSec;
+    elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
+    elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
+
+   let elapsedString = elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
+
+   	$("#clock").html(elapsedString);
+
+
+ }
+
     var kid = "<?php echo $kid?>";
 
     function checkround1(){
@@ -344,6 +375,7 @@
         checkround1();
         checkkid();
         question_answered();
+        setInterval('updateClock()', 1000);
     });
     function end(){
         let error=$('#error');

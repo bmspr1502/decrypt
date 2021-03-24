@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['admin'])) {
+    if ($_SESSION['admin'] == 1) {
+        echo '<script>window.location.href="adminconsole.php";</script>';
+    }
+}else {
+    ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -46,3 +56,7 @@
 </div>
   </body>
 </html>
+    <?php
+
+}
+?>
