@@ -38,6 +38,39 @@ $(document).ready(function(){
             <img src="images/logo.png" height="50" alt="Robotics">
         </a>
         <h2 class = "text-white font-weight-bold" style = "margin-left:590px">DECRYPTIT</h2>
+        <div class="navbar-nav ml-auto">
+            <button type="button" name="rules" class="nav-item btn btn-primary" data-toggle="modal" data-target="#rulesModal">Rules</button>
+            <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Rules</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ol>
+                    <li>Participants shortlisted from Round 1 alone will be playing this round.</li>
+                    <li>Round 2 shall be accessed only from laptops.</li>
+                    <li>You would have received an email containing your unique password for this round.Enter your email id, unique password,mobile number(the same you entered for round 1) and proceed.</li>
+                    <li>Make sure to complete the round at a single stretch.</li>
+                    <li>The timer begins as soon as you login to the page.It keeps running till you click the “End Quiz” button.The site automatically closes at 3:00 P.M IST.</li>
+                    <li>Make sure to click the "End Quiz" button when you want to end the round even if you haven’t completed all the answers before you leave the site.</li>
+                    <li>Questions are hidden within the room displayed immediately after login.Search for the questions by hovering your mouse over the image.Click on the image to view the question.</li>
+                    <li>Marks will be based on correctness as well as time elapsed and difficulty of questions.</li>
+                    <li>Malpractice in any forms will not be tolerated.</li>
+                    <li>Organiser's decision will be final.</li>
+                  </ol>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </nav>
 <section class="ftco-section">
 <div class="container">
@@ -60,6 +93,18 @@ $(document).ready(function(){
 </div>
 <div class="form-group">
 <input type="email" class="form-control" name="email" placeholder="Email" required="">
+</div>
+<div class="form-group">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    id="flexCheckDefault"
+    required
+  />
+  <label class="form-check-label" for="flexCheckDefault">
+    I agree with the Rules of this round
+  </label>
 </div>
 <!--
 <div class="form-group">
