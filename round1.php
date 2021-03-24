@@ -4,6 +4,10 @@
   if(isset($_SESSION['kid'])){
       $kid = $_SESSION['kid'];
   //echo $kid;
+  include "functions/DB.php";
+  $query = "SELECT * FROM userdata WHERE kid = $kid";
+  $result = $con->query($query);
+  $row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -275,15 +279,42 @@
             </div>
             <h2 class = "text-white" style = "margin-left:300px">DECRYPTIT</h2>
             <div class="navbar-nav ml-auto">
+            <p id = "clock" class="nav-item text-white text-center"></p>
+            </div>
+            <div class="navbar-nav ml-auto">
             <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
             </div>
         </div>
     </nav>
 </div>
-
-
 </body>
 <script>
+var start = '<?php echo $row['start'];?>';
+var startTime = new Date(start);
+function updateClock(){
+ 	var currentTime = new Date ();
+   var elapsedTime = new Date(currentTime - startTime);
+  	var currentHours = currentTime.getHours ();
+  	var currentMinutes = currentTime.getMinutes ();
+  	var currentSeconds = currentTime.getSeconds ();
+  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+  	//var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+    //$("#clock").html(currentTimeString);
+    //timeela = elapsedTime/3600000;
+    console.log(elapsedTime);
+    //$dteStart = new DateTime($row['start']);
+    //php $dteDiff  = $dteStart->diff(currentTimeString);?>
+   
+   	//$("#clock").html(//php echo $dteDiff?>);
+     $("#clock").html(currentTimeString-start);
+
+   	  	
+ }
+  
     var kid = "<?php echo $kid?>";
 
     function checkround1(){
@@ -311,6 +342,7 @@
         checkround1();
         checkkid();
         question_answered();
+        setInterval('updateClock()', 1000);
     });
     function end(){
         let error=$('#error');
