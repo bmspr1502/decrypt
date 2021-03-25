@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['kid'])){
+    echo '<script>window.location.href="round1.php"</script>';
+}
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0059)https://preview.colorlib.com/theme/bootstrap/login-form-20/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

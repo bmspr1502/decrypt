@@ -8,6 +8,7 @@
       echo "Done";
       unset($_SESSION['kid']);
       unset($_SESSION['phone']);
+      unset($_SESSION['start']);
     } else {
       echo $con->error;
     }

@@ -13,12 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $phone = stripcslashes($phone);
 
 
-  $sql1= "SELECT * FROM userdata WHERE kid='$kid'";
+  $sql1= "SELECT kid,start FROM userdata WHERE kid='$kid'";
   $result= $con->query($sql1);
   $count = $result->num_rows;
   if($count == 1){
+    $row = $result->fetch_assoc();
     $_SESSION["kid"] = $kid;
     $_SESSION["phone"] = $phone;
+    $_SESSION['start'] = $row['start'];
     echo "<script>window.location.href='round1.php'</script>";
   }
   else {

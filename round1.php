@@ -1,19 +1,7 @@
 <?php
   session_start();
-  //echo $_SESSION["kid"];
   if(isset($_SESSION['kid'])){
       $kid = $_SESSION['kid'];
-  //echo $kid;
-  include "functions/DB.php";
-  $query = "SELECT * FROM userdata WHERE kid = '$kid'";
-  if($result = $con->query($query)){
-      $row = $result->fetch_assoc();
-  }else{
-      echo $con->error;
-  }
-
-
-  //$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -317,7 +305,9 @@
                 </div>
               </div>
             </div>
-            <p id = "clock" class="nav-item text-white text-center"></p>
+            <div class="navbar-nav ml-auto">
+                <p id = "clock" class="nav-item text-white text-center"></p>
+            </div>
             <div class="navbar-nav ml-auto">
             <button type="button" name="end" onclick="end()" class="nav-item btn btn-success">End Quiz</button>
             </div>
@@ -326,8 +316,12 @@
 </div>
 </body>
 <script>
-var start = '<?php echo $row['start'];?>';
-var startTime = new Date(start);
+
+
+    var kid = "<?php echo $kid?>";
+    var startTime = new Date('<?php echo $_SESSION['start'];?>');
+//var start = '';
+
 function updateClock(){
  	let currentTime = new Date ();
    let elapsedTime = currentTime - startTime;
@@ -341,14 +335,14 @@ function updateClock(){
     elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
     elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
 
-   let elapsedString = elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
+   let elapsedString = ' Elapsed Time: <br>'+elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
 
    	$("#clock").html(elapsedString);
-
+    //console.log(elapsedString);
 
  }
 
-    var kid = "<?php echo $kid?>";
+
 
     function checkround1(){
         $.post('functions/checkround1.php', {
@@ -356,7 +350,7 @@ function updateClock(){
         }, function (result){
             if(result==='DONE'){
                 alert('Already attempted round1. Wait for result.');
-                window.location.href='thankyou.php';
+                end();
             }
         });
 
@@ -371,11 +365,15 @@ function updateClock(){
             });
         }
 
+
     $(document).ready(function (){
+        //var startTime = getstarttime() ;
+
+        console.log(startTime);
         checkround1();
         checkkid();
         question_answered();
-        setInterval('updateClock()', 1000);
+        setInterval(function () {updateClock(startTime)}, 1000);
     });
     function end(){
         let error=$('#error');
