@@ -74,7 +74,14 @@ if(!($result1 = $con->query($query1))){
 
             <form action = "result.php" method = "post">
                 <input type = "hidden" name = "kid" value ="<?php echo $row['kid'];?>">
-                <td><button type="submit" class="btn btn-warning" name = "view">View result</button></td>
+                <td>
+                    <?php
+                    if(isset($row['totscore'])){
+                    ?>
+                    <button type="submit" class="btn btn-warning" name = "view">View result</button>
+                    <?php
+                        }
+                    ?></td>
             </form>
         </tr>
         <?php

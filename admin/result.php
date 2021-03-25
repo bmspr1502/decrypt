@@ -104,7 +104,7 @@ if(isset($_POST["view"])){
 </div>
     <?php
 }else{
-        echo '<script>alert("Not Yet Attempted");';
+        echo '<script>alert("Not Yet ' . $kid .' Attempted");';
         echo "window.location.href = 'index.php';</script>";
     }
     }else{
