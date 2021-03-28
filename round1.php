@@ -1,5 +1,6 @@
 <?php
   session_start();
+  //print_r($_SESSION);
   if(isset($_SESSION['kid'])){
       $kid = $_SESSION['kid'];
 ?>
@@ -322,34 +323,32 @@
     var startTime = new Date('<?php echo $_SESSION['start'];?>');
 //var start = '';
 
-function updateClock(){
- 	let currentTime = new Date ();
-   let elapsedTime = currentTime - startTime;
-   let elapsedSec = Math.floor(elapsedTime/1000);
-   let elapsedMin = Math.floor(elapsedSec/60);
-   let elapsedHr = Math.floor(elapsedMin/60);
-   elapsedSec = elapsedSec%60;
-   elapsedMin = elapsedMin%60;
+    function updateClock(){
+        let currentTime = new Date ();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        if (hours ===16 && minutes >=16){
+           //alert('Times Up');
+           end();
+           return;
+        }
+       let elapsedTime = currentTime - startTime;
+       let elapsedSec = Math.floor(elapsedTime/1000);
+       let elapsedMin = Math.floor(elapsedSec/60);
+       let elapsedHr = Math.floor(elapsedMin/60);
+       elapsedSec = elapsedSec%60;
+       elapsedMin = elapsedMin%60;
 
-    elapsedSec = ( elapsedSec < 10 ? "0" : "" ) + elapsedSec;
-    elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
-    elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
+        elapsedSec = ( elapsedSec < 10 ? "0" : "" ) + elapsedSec;
+        elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
+        elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
 
-   let elapsedString = ' Elapsed Time: <br>'+elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
+       let elapsedString = ' Elapsed Time: <br>'+elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
 
-   	$("#clock").html(elapsedString);
-    //console.log(elapsedString);
+        $("#clock").html(elapsedString);
+        //console.log(elapsedString);
 
- }
- 
-function closetime(){
-  var date = new Date(); 
-  var hours = date.getHours(); 
-  var minutes = date.getMinutes();
-  if (hours == 3 && minutes == 47 ){
-    window.location.href = "thankyou.php";
-  }
-} 
+     }
 
 
     function checkround1(){
@@ -375,25 +374,24 @@ function closetime(){
 
 
     $(document).ready(function (){
-        //var startTime = getstarttime() ;
 
         console.log(startTime);
         checkround1();
         checkkid();
         question_answered();
         setInterval(function () {updateClock(startTime)}, 1000);
-        window.setInterval(function(){closetime()}, 1000); 
+
     });
     function end(){
         let error=$('#error');
-        //$.get("end.php");
+
         $.post('end.php', {
             kid:kid
         }, function (result){
             if(result==='Done'){
                 window.location.href = 'thankyou.php';
             }else{
-
+                alert(result);
             }
         })
     }
