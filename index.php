@@ -18,6 +18,7 @@ if(isset($_SESSION['kid'])){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
+    $('#rulesModal').modal('show');
     $("form").on("submit", function(event){
         event.preventDefault();
 
@@ -46,7 +47,7 @@ $(document).ready(function(){
         <h2 class = "text-white font-weight-bold" style = "margin-left:590px">DECRYPTIT</h2>
         <div class="navbar-nav ml-auto">
             <button type="button" name="rules" class="nav-item btn btn-primary" data-toggle="modal" data-target="#rulesModal">Rules</button>
-            <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade hide" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
