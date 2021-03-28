@@ -24,13 +24,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "<script>window.location.href='round1.php'</script>";
   }
   else {
+
     $sql = "INSERT INTO userdata (kid, name, email, phone, start) VALUES ('$kid', '$name', '$email', '$phone', CURRENT_TIMESTAMP())";
-    if(mysqli_query($con, $sql))
+    if($con->query($sql))
     {
       echo "New user inserted";
       $_SESSION["kid"] = $kid;
       $_SESSION["phone"] = $phone;
-      echo "<script>window.location.href='round1.php'</script>";
+      $qr = "SELECT start FROM userdata WHERE kid = '$kid'";
+      if($result = $con->query($qr)){
+        $row = $result->fetch_row();
+        $_SESSION['start'] = $row['start'];
+        echo "<script>window.location.href='round1.php'</script>";
+      }else{
+        echo "Error: " . $sql . "<br>" . $con->error;
+      }
+
     } else {
       echo "Error: " . $sql . "<br>" . $con->error;
     }
