@@ -341,7 +341,15 @@ function updateClock(){
     //console.log(elapsedString);
 
  }
-
+ 
+function closetime(){
+  var date = new Date(); 
+  var hours = date.getHours(); 
+  var minutes = date.getMinutes();
+  if (hours == 3 && minutes == 47 ){
+    window.location.href = "thankyou.php";
+  }
+} 
 
 
     function checkround1(){
@@ -374,6 +382,7 @@ function updateClock(){
         checkkid();
         question_answered();
         setInterval(function () {updateClock(startTime)}, 1000);
+        window.setInterval(function(){closetime()}, 1000); 
     });
     function end(){
         let error=$('#error');
