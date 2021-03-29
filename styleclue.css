@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 754px;
+    height: 753px;
 }
 .modal.show  {
     display:flex!important;
@@ -11,6 +11,11 @@
     justify-content:center;
     align-content:center;
     align-items: flex-start;
+  }
+  #end{
+      position: absolute;
+      top:900px;
+      left: 500px;
   }
 #q1{
     position:absolute;
@@ -58,7 +63,7 @@
     left: 1100px;
 }
 .butt{
-    /*background-color: transparent; */
+    background-color: transparent; 
     border:transparent;
     height:50px;
     width: 100px;
@@ -70,4 +75,4 @@
 }
 table, tr, td {
     border: 1px solid black;
-  }
+}
