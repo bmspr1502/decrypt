@@ -7,7 +7,7 @@ if($_POST['kid']){
     $query = "SELECT answer". $qnid. " FROM round1 WHERE kid = '$kid';";
     if($result = $con->query($query)){
         $row = $result->fetch_row();
-        echo $row[0];
+        echo html_entity_decode($row[0]);
     }else{
         echo $con->error;
     }
