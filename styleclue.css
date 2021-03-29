@@ -65,6 +65,7 @@
 }
 .butt{
     background-color: transparent; 
+    opacity:0.1;
     border:transparent;
     height:50px;
     width: 100px;
