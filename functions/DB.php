@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$password = "";
-$database = "decrypit";
+$user = "u672681888_root";
+$password = "3d#MobyE";
+$database = "u672681888_decryptit";
 
 $con = new mysqli($host, $user, $password, $database);
 
