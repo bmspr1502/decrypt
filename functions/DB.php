@@ -1,4 +1,5 @@
 <?php
+/*
 $host = "localhost";
 $user = "u672681888_root";
 $password = "3d#MobyE";
