@@ -17,8 +17,8 @@
   <link rel="stylesheet" href = "styleclue.css">
 </head>
 
-<body>
-<div id="clue">
+<body id="clue">
+<div >
 
 <button type="button" class="butt" data-toggle="modal" onclick="text_load(1)" data-target="#ques1" id="q1"></button>
 <div class="modal fade" id="ques1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
