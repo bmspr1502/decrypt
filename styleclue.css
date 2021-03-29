@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 753px;
+    height: 100vh;
 }
 .modal.show  {
     display:flex!important;
