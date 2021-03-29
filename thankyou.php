@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style media="screen">
-      /*body{
-        background-image: url('images/thankyouimg.jpeg');
-        background-repeat: no-repeat;
+      body{
+        background-image: url('images/img3.jpg');
+        /*background-repeat: no-repeat;*/
         background-size: cover;
-      }*/
+      }
+    /*
       #myVideo {
       position: fixed;
       background-repeat: no-repeat;
-      /*background-size: cover;*/
-    }
+      /*background-size: cover;
+    }*/
       .dabba{
         margin-left: 25em;
-        /*margin-top: 12em*/
+        margin-top: 12em;
         margin-right: 25em;
-          margin-bottom: 10em;
+        margin-bottom: 10em;
         background-color: black;
         padding: 5%;
         color: white;
@@ -48,15 +49,19 @@
       }
       .fa {
         background: black;
-        color: white;
+        color: #A9A9A9;
       }
-
+      .null{
+        margin-top: 30vh;
+      }
     </style>
   </head>
   <body>
+    <!--
   <video autoplay muted loop id="myVideo">
         <source src="images/image4.mp4" type="video/mp4">
-    </video>
+        </video>-->
+
     <!--
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
@@ -70,6 +75,7 @@
     </nav>
     <div class="bg">
     -->
+
     <div class="dabba">
       <h1>Thank you for participating</h1>
       <h4>Results will be mailed to your registered mail id </h4>
@@ -86,5 +92,6 @@
 
 
     </div>
+
   </body>
 </html>
