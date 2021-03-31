@@ -35,7 +35,7 @@ if(isset($_SESSION['admin'])) {
         });
     });
     </script>
-    <title></title>
+    <title>Login: Admin</title>
   </head>
   <body>
     <div class="dabba">
