@@ -339,9 +339,9 @@
        elapsedSec = elapsedSec%60;
        elapsedMin = elapsedMin%60;
 
-        elapsedSec = ( elapsedSec < 10 ? "0" : "" ) + elapsedSec;
-        elapsedMin = ( elapsedMin < 10 ? "0" : "" ) + elapsedMin;
-        elapsedHr = ( elapsedHr < 10 ? "0" : "" ) + elapsedHr;
+        elapsedSec = ( elapsedSec < 10 && elapsedSec >=0 ? "0" : "" ) + elapsedSec;
+        elapsedMin = ( elapsedMin < 10 && elapsedMin >=0 ? "0" : "" ) + elapsedMin;
+        elapsedHr = ( elapsedHr < 10 && elapsedHr >=0? "0" : "" ) + elapsedHr;
 
        let elapsedString = ' Elapsed Time: <br>'+elapsedHr + " : " + elapsedMin + " : " + elapsedSec;
 

@@ -34,11 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if($con->query($sql))
       {
         echo "New user inserted";
-        $_SESSION["kid"] = $kid;
-        $_SESSION["phone"] = $phone;
+        
         $qr = "SELECT start FROM userdata WHERE kid = '$kid'";
         if($result = $con->query($qr)){
           $row = $result->fetch_assoc();
+          $_SESSION["kid"] = $kid;
+          $_SESSION["phone"] = $phone;
           $_SESSION['start'] = $row['start'];
           //echo "<script>window.location.href='round1.php'</script>";
         }else{

@@ -116,11 +116,7 @@ $(document).ready(function(){
     I agree with the Rules of this round
   </label>
 </div>
-<!--
-<div class="form-group">
-<input type="password" class="form-control" name="password" placeholder="Password" required="">
-</div>
--->
+
 <div class="form-group">
 <button type="submit" class="form-control btn btn-primary submit px-3">PLAY!!!</button>
 </div>
