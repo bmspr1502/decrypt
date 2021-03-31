@@ -63,13 +63,6 @@
     top: 50vh;
     left: 50vw;
 }
-.butt{
-    background-color: white;
-    opacity:0.05;
-    border:transparent;
-    height:50px;
-    width: 100px;
-}
 #myVideo {
     position: fixed;
     background-repeat: no-repeat;

@@ -14,7 +14,7 @@ if(isset($_SESSION['kid'])){
 <link rel="stylesheet" href="./login_files/font-awesome.min.css">
 <link rel="stylesheet" href="./login_files/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -102,6 +102,9 @@ $(document).ready(function(){
 <input type="email" class="form-control" name="email" placeholder="Email" required="">
 </div>
 <div class="form-group">
+<input type="password" class="form-control" name="password" placeholder="Password" required="">
+</div>
+<div class="form-group">
   <input
     class="form-check-input"
     type="checkbox"
@@ -135,7 +138,7 @@ $(document).ready(function(){
 </div>
 </section>
 <script src="./login_files/jquery.min.js.download"></script>
-<script src="./login_files/popper.js.download"></script>
-<script src="./login_files/bootstrap.min.js.download"></script>
+<!--<script src="./login_files/popper.js.download"></script>
+<script src="./login_files/bootstrap.min.js.download"></script>-->
 <script src="./login_files/main.js.download"></script>
 </body></html>
