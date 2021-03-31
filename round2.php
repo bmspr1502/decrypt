@@ -10,6 +10,7 @@
   <title>Decryptit | Round-2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo.png" type="image/icon type">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -31,7 +32,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Write a program for error correction in digital communication</div>
+      <div><b>Decrypt the following message 😉</b>
+<br>Fictional border ordinary boredom
+<br>Elephant fox programming genre 
+<br>Robotics mini enigmatic son
+<br>Classy experience</div>
           <p id="error1" class="text-white text-center bg-danger"></p>
           <p id="success1" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer1"></textarea>
@@ -55,7 +60,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Write a program to exchange all odd bits with even bits.(Note: input must be binary)</div>
+      <div><b>Decrypt the following message 😊</b>
+      <br>12-5-1-18-14
+      </div>
           <p id="error2" class="text-white text-center bg-danger"></p>
           <p id="success2" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer2"></textarea>
@@ -79,11 +86,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Write a program to print
-            <div style="margin-left:50%">*</div>
-            <div style="margin-left:43%">* A *</div>
-            <div style="margin-left:37%">* A * B *</div>
-            <div style="margin-left:32%">* A * B * C *</div>
+      <div>
+        <b>Decrypt the following message 😭</b>
+        <img src="images/3rd question img.png" class='img-fluid' alt="IMAGE">
         </div>
           <p id="error3" class="text-white text-center bg-danger"></p>
           <p id="success3" class="text-white text-center bg-success"></p>
@@ -108,30 +113,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Take any two numbers for ex: 18 12
-        <table>
-          <tr>
-            <td>18</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>0</td>
-            <td>6</td>
-          </tr>
-        </table>
-          take input from user and implement the opeation done above ,display only the final result.
+      <div><b>Decrypt the following message 😎</b>
+<br>UM UZNKXY
+<br>Hint:The number of the most valuable and the least valued thing in a million
         </div>
           <p id="error4" class="text-white text-center bg-danger"></p>
           <p id="success4" class="text-white text-center bg-success"></p>
@@ -156,7 +140,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>91% of the girls aged 10-18 years have experienced all types of harasement.Studies show that due to social expression and fear of retaliation the reported number is far leass than the real number.</div>
+      <div><b>Decrypt:</b> 67-72-2-38-92 🙄
+<br>Hint:“No matter what he does, every person on earth plays a central role in the history of the world. And normally he doesn't know it.”
+</div>
           <p id="error5" class="text-white text-center bg-danger"></p>
           <p id="success5" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer5"></textarea>
@@ -180,7 +166,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>Our teams are over run with emergencies and urgent requests.This means we have no time to innovate or to get the best from staff.If this continues, our competion will push us out of the market.</div>
+      <div><b>Decrypt the following message 😶</b>
+        <img src="images/6th question img1.png" class='img-fluid' alt="img">
+        <br>key:
+        <img src="images/6th question img2.png" class='img-fluid' alt="img">
+      </div>
           <p id="error6" class="text-white text-center bg-danger"></p>
           <p id="success6" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer6"></textarea>
@@ -204,7 +194,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>The boarding protocols used by XYZ airlines should aim to get each flights passengers aboard the plane quickly and efficiently so that the plane can take off as soon as possible.</div>
+      <div><b>Decrypt the following message 😴</b>
+            <br>LRRENOAFM
+      </div>
           <p id="error7" class="text-white text-center bg-danger"></p>
           <p id="success7" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer7"></textarea>
@@ -217,7 +209,7 @@
   </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques8" id="q8"></button><!--hidden-->
+<button type="button" class="butt" data-toggle="modal" onclick="text_load(8)" data-target="#ques8" id="q8"></button><!--hidden-->
 <div class="modal fade" id="ques8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -228,7 +220,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>All smart devices,uses our passwords,voice,touch ID etc and all of them are synced.How can we improve the security of data shared.</div>
+        <div>
+        Attend this question after completing all other 7 questions:
+        <br>From the previously decrypted chunks of messages formulate the entire statement🙏     
+        </div>
           <p id="error8" class="text-white text-center bg-danger"></p>
           <p id="success8" class="text-white text-center bg-success"></p>
           <textarea rows="5" class="form-control" id="answer8"></textarea>
@@ -241,7 +236,7 @@
   </div>
 </div>
 
-<button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button><!--hidden-->
+<!-- button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button>
 <div class="modal fade" id="ques9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -263,7 +258,9 @@
       </div>
     </div>
   </div>
-</div>
+</div -->
+
+
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <a href="#" class="navbar-brand">
             <img src="images/logo.png" height="50" alt="Robotics">
@@ -272,7 +269,7 @@
             <div class="navbar-nav">
                 <p id="qnsans" class="nav-item text-white text-center"></p>
             </div>
-            <h2 class = "text-white" style = "margin-left:300px">DECRYPTIT</h2>
+            <h2 class = "text-white" style = "margin-left:20vw">DECRYPTIT</h2>
             <div class="navbar-nav ml-auto">
                 <button type="button" name="rules" class="nav-item btn btn-primary" data-toggle="modal" data-target="#rulesModal">Rules</button>
                 <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -356,7 +353,7 @@
             kid:kid
         }, function (result){
             if(result==='DONE'){
-                alert('Already attempted round1. Wait for result.');
+                alert('Already attempted the round. Wait for result.');
                 end();
             }
         });
@@ -401,7 +398,7 @@
         $.post('functions/numqnsans.php', {
             kid: kid
         }, function (result){
-            qnsans.html("No of qns answered by : "+kid+" is "+result+" of 9");
+            qnsans.html("No of qns answered by : "+kid+" is "+result+" of 8");
         });
     }
 

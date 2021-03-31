@@ -16,6 +16,7 @@ if(!($result1 = $con->query($query1))){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png" type="image/icon type">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -41,8 +42,8 @@ if(!($result1 = $con->query($query1))){
         <th>Start time</th>
         <th>End time</th>
         <th>Time elapsed</th>
-        <th>Round1 Score</th>
-        <th>Selected - R2</th>
+        <th>Score</th>
+        <th>Selected</th>
         <th>Result</th>
     </tr>
     </thead>

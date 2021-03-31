@@ -12,5 +12,7 @@
     } else {
       echo $con->error;
     }
+  }else{
+    echo "<script>window.location.href='index.php';</script>";
   }
 ?>

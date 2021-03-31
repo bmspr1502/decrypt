@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION["kid"] = $kid;
       $_SESSION["phone"] = $phone;
       $_SESSION['start'] = $row['start'];
-      echo "<script>window.location.href='round1.php'</script>";
+      echo "<script>window.location.href='round2.php'</script>";
     }
     else {
 
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $_SESSION["kid"] = $kid;
           $_SESSION["phone"] = $phone;
           $_SESSION['start'] = $row['start'];
-          //echo "<script>window.location.href='round1.php'</script>";
+          echo "<script>window.location.href='round2.php'</script>";
         }else{
           echo "Error: " . $sql . "<br>" . $con->error;
         }
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
   else{
-    echo "NOT Viewable";
+    echo "<script>window.location.href='index.php'</script>";
   }
 
 

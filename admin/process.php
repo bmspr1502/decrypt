@@ -13,6 +13,7 @@ if(isset($_POST['kid'])){
     }
 }
 else{
-    echo '<script>alert("Accessed denied");</script>';
+    echo '<script>alert("Accessed denied");
+    window.location.href="index.php"</script>';
 }
 ?>

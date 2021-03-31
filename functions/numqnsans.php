@@ -16,10 +16,9 @@ if(isset($_POST['kid'])) {
             $length[6] = strlen($row['answer6']);
             $length[7] = strlen($row['answer7']);
             $length[8] = strlen($row['answer8']);
-            $length[9] = strlen($row['answer9']);
 
             $answered = 0;
-            for ($i = 1; $i <= 9; $i++) {
+            for ($i = 1; $i <= 8; $i++) {
                 if ($length[$i] > 0)
                     $answered++;
             }

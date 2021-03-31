@@ -1,14 +1,14 @@
 <?php
 session_start();
 if(isset($_SESSION['kid'])){
-    echo '<script>window.location.href="round1.php"</script>';
+    echo '<script>window.location.href="round2.php"</script>';
 }
 ?>
 <!DOCTYPE html>
 <!-- saved from url=(0059)https://preview.colorlib.com/theme/bootstrap/login-form-20/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Decryptit | Login</title>
-
+<link rel="icon" href="images/logo.png" type="image/icon type">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="./login_files/css" rel="stylesheet">
 <link rel="stylesheet" href="./login_files/font-awesome.min.css">
@@ -44,7 +44,7 @@ $(document).ready(function(){
         <a href="#" class="navbar-brand">
             <img src="images/logo.png" height="50" alt="Robotics">
         </a>
-        <h2 class = "text-white font-weight-bold" style = "margin-left:590px">DECRYPTIT</h2>
+        <h2 class = "text-white font-weight-bold" style = "margin-left:37vw">DECRYPTIT</h2>
         <div class="navbar-nav ml-auto">
             <button type="button" name="rules" class="nav-item btn btn-primary" data-toggle="modal" data-target="#rulesModal">Rules</button>
             <div class="modal fade hide" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -72,7 +72,7 @@ $(document).ready(function(){
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        
                 </div>
               </div>
             </div>

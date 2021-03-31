@@ -58,16 +58,21 @@
     top: 80vh;
     left: 50vw;
 }
-#q9{
-    position:absolute;
-    top: 50vh;
-    left: 50vw;
-}
+
 #myVideo {
     position: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
 }
+
+.butt{
+    background-color: white;
+    opacity:0.03;
+    border:transparent;
+    height:50px;
+    width: 100px;
+}
+
 table, tr, td {
     border: 1px solid black;
 }

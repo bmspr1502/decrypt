@@ -17,6 +17,7 @@ if(isset($_POST["view"])){
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo.png" type="image/icon type">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -36,53 +37,41 @@ if(isset($_POST["view"])){
 <div class="text-center"><strong><h2><?php echo $row['kid']; ?>'s Response</h2></strong></div>
 <p id="result"></p>
 <div class = "container">
-    <p class = "text-white bg-dark">1. Write a program for error correction in digital communication</p><br>
+  
+    <p class = "text-white bg-dark p-2">
+        1.Decrypt the following message 😉
+<br>Fictional border ordinary boredom
+<br>Elephant fox programming genre 
+<br>Robotics mini enigmatic son
+<br>Classy experience</p><br>
     <pre><?php echo $row['answer1'];?></pre><br>
-    <p class = "text-white bg-dark">2. Write a program to exchange all odd bits with even bits.(Note: input must be binary)</p><br>
+    <p class = "text-white bg-dark p-2">2.Decrypt the following message 😊
+<br>12-5-1-18-14</p><br>
     <pre><?php echo $row['answer2'];?></pre><br>
-    <div class = "text-white bg-dark">3. Write a program to print
-            <div style="margin-left:50%">*</div>
-            <div style="margin-left:49%">* A *</div>
-            <div style="margin-left:48%">* A * B *</div>
-            <div style="margin-left:47%">* A * B * C *</div>
-        </div><br>
+    <div class = "text-white bg-dark p-2">3.Decrypt the following message 😭
+        <div><img class='img-fluid' src="../images/3rd question img.png" alt="IMAGE"></div>
+    </div>
+        <br>
     <pre><?php echo $row['answer3'];?></pre><br>
-    <div class = "text-white bg-dark">4. Take any two numbers for ex: 18 12
-        <table>
-          <tr>
-            <td>18</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>0</td>
-            <td>6</td>
-          </tr>
-        </table>
-          take input from user and implement the opeation done above ,display only the final result.
+    <div class = "text-white bg-dark p-2">4.Decrypt the following message 😎
+<br>UM UZNKXY
+<br>Hint:The number of the most valuable and the least valued thing in a million
         </div><br>
     <pre><?php echo $row['answer4'];?></pre><br>
-    <p class = "text-white bg-dark">5. 91% of the girls aged 10-18 years have experienced all types of harasement.Studies show that due to social expression and fear of retaliation the reported number is far leass than the real number.</p><br>
+    <p class = "text-white bg-dark p-2">5.Decrypt: 67-72-2-38-92 🙄
+<br>Hint:“No matter what he does, every person on earth plays a central role in the history of the world. And normally he doesn't know it.”</p><br>
     <pre><?php echo $row['answer5'];?></pre><br>
-    <p class = "text-white bg-dark">6. Our teams are over run with emergencies and urgent requests.This means we have no time to innovate or to get the best from staff.If this continues, our competion will push us out of the market.</p><br>
+    <div class = "text-white bg-dark p-2">6.Decrypt the following message 😶
+    <div><img class='img-fluid' src="../images/6th question img1.png" alt="img"></div>
+        <br>key:
+    <div><img class='img-fluid' src="../images/6th question img2.png" alt="img"> </div></div><br>
     <pre><?php echo $row['answer6'];?></pre><br>
-    <p class = "text-white bg-dark">7. The boarding protocols used by XYZ airlines should aim to get each flights passengers aboard the plane quickly and efficiently so that the plane can take off as soon as possible.</p><br>
+    <p class = "text-white bg-dark p-2">7.>Decrypt the following message 😴
+            <br>LRRENOAFM</p><br>
     <pre><?php echo $row['answer7'];?></pre><br>
-    <p class = "text-white bg-dark">8. All smart devices,uses our passwords,voice,touch ID etc and all of them are synced.How can we improve the security of data shared.</p><br>
+    <p class = "text-white bg-dark p-2">8.Attend this question after completing all other 7 questions:
+From the previously decrypted chunks of messages formulate the entire statement🙏</p><br>
     <pre><?php echo $row['answer8'];?></pre><br>
-    <p class = "text-white bg-dark">9. Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</p><br>
-    <pre><?php echo $row['answer9'];?></pre><br>
     <p class = "text-white bg-success">Total score</p><br>
     <form action = "process.php" method = "post">
     <input type = "number" name = "score" id = "score" value="<?php echo $row['totscore']; ?>" required><br><br>
