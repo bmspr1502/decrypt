@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2021 at 08:09 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.3.14
+-- Generation Time: Mar 31, 2021 at 02:00 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `decrypit`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `entry_check`
+--
+
+CREATE TABLE `entry_check` (
+  `id` int(11) NOT NULL,
+  `kid` varchar(20) NOT NULL,
+  `pass` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `entry_check`
+--
+
+INSERT INTO `entry_check` (`id`, `kid`, `pass`) VALUES
+(1, 'k!1', 'tree'),
+(2, 'k!2', 'book'),
+(3, 'k!3', 'map'),
+(4, 'k!4', 'paper');
 
 -- --------------------------------------------------------
 
@@ -72,7 +93,8 @@ INSERT INTO `round1` (`kid`, `answer1`, `answer2`, `answer3`, `answer4`, `answer
 ('twomore', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
 ('twomores', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
 ('text', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
-('check', 'asdfadsf', NULL, NULL, NULL, 'asdfasdfasdfasdf', NULL, NULL, NULL, NULL, 0, 0);
+('check', 'asdfadsf', NULL, NULL, NULL, 'asdfasdfasdfasdf', NULL, NULL, NULL, NULL, 0, 0),
+('k!1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -111,6 +133,7 @@ INSERT INTO `userdata` (`kid`, `name`, `email`, `phone`, `start`, `endtime`, `ro
 ('helllooo', 'asdfafga', 'bmspr1502@gmail.com', 'jjasdgfag', '2021-03-18 14:57:18', '2021-03-18 14:57:18', 0, 0),
 ('helo', 'Preeti krishnaveni', 'bmspr1502@gmail.com', '2414', '2021-03-16 22:15:58', '2021-03-16 22:25:32', 1, 0),
 ('hey', 'Preeti krishnaveni', 'bmspr1502@gmail.com', '2414', '2021-03-16 22:19:34', '2021-03-16 22:25:32', 1, 0),
+('k!1', 'Pinky', 'r@gmail.com', '9445644788', '2021-03-31 17:05:21', '2021-03-31 17:26:51', 1, 0),
 ('k!example', 'Test', 'test@k.com', '12345', '2021-03-21 13:37:50', '2021-03-21 13:39:39', 1, 0),
 ('k12345', 'PRANAVA RAMAN B M S', 'bmspr1502@gmail.com', '09443501317', '2021-03-20 04:40:16', '2021-03-29 17:11:23', 1, 0),
 ('k32151', 'Checking', 'check@email.com', '9123412341', '2021-03-23 12:32:00', '2021-03-23 12:33:16', 1, 0),
@@ -131,10 +154,26 @@ INSERT INTO `userdata` (`kid`, `name`, `email`, `phone`, `start`, `endtime`, `ro
 --
 
 --
+-- Indexes for table `entry_check`
+--
+ALTER TABLE `entry_check`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `userdata`
 --
 ALTER TABLE `userdata`
   ADD PRIMARY KEY (`kid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `entry_check`
+--
+ALTER TABLE `entry_check`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
