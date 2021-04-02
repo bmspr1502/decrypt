@@ -300,12 +300,12 @@
         let currentTime = new Date ();
         var hours = currentTime.getHours();
         var minutes = currentTime.getMinutes();
-        /*
+        
         if (hours >=15 ){
            end();
            return;
         }
-        */
+        
        let elapsedTime = currentTime - startTime;
        let elapsedSec = Math.floor(elapsedTime/1000);
        let elapsedMin = Math.floor(elapsedSec/60);
