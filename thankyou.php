@@ -22,10 +22,11 @@
       /*background-size: cover;
     }*/
       .dabba{
-        margin-left: 25em;
-        margin-top: 12em;
-        margin-right: 25em;
-        margin-bottom: 10em;
+        margin-left: 25vw;
+        margin-top: 23vh;
+        width: 50vw;
+       
+
         background-color: black;
         padding: 5%;
         color: white;
@@ -47,35 +48,12 @@
       }
       .fa{
         padding: 20px;
-      }
-      .fa {
         background: black;
         color: #A9A9A9;
-      }
-      .null{
-        margin-top: 30vh;
       }
     </style>
   </head>
   <body>
-    <!--
-  <video autoplay muted loop id="myVideo">
-        <source src="images/image4.mp4" type="video/mp4">
-        </video>-->
-
-    <!--
-    <nav class="navbar navbar-expand-md navbar-light bg-dark">
-        <a href="#" class="navbar-brand">
-            <img src="images/logo.png" height="50" alt="Robotics">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ml-auto">
-            <p class="nav-item text-white">DECRYPTIT</button>
-            </div>
-        </div>
-    </nav>
-    <div class="bg">
-    -->
 
     <div class="dabba">
       <h1>Thank you for participating</h1>
@@ -83,10 +61,9 @@
       <h4>For more updates follow us on</h4>
       <div class="social">
       <ul>
-      <li><a href= '#' class="fa fa-facebook"></a></li>
-      <li><a href="#" class="fa fa-instagram"></a></li>
-      <li><a href="#" class="fa fa-twitter"></a></li>
-      <li><a href="#" class="fa fa-linkedin"></a></li>
+      <li><a href= 'https://m.facebook.com/roboticsclubofceg/?_rdc=1&_rdr&refsrc=http%3A%2F%2Fwww.google.com%2F' target='_blank'  class="fa fa-facebook"></a></li>
+      <li><a href="https://instagram.com/robotics_club_ceg?igshid=1rcf4kh5jl45a" class="fa fa-instagram"  target='_blank' ></a></li> 
+      <li><a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGe8hjUnMXGzAAAAXiKHwUAOQqtUah6ucMwte4BhyWERRwK_mNtuITyU--IhVV52BHTZRzIBmuqRyJEm8WFBXsHH1CnjuE02Rjus3VoUeSsV7LrbT_bSYEBEEHhme4QedKl8go=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Froboticsclubofceg" target='_blank' class="fa fa-linkedin"></a></li>
     </ul>
     <a href="index.php">Go back to home page</a>
       </div>

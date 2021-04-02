@@ -50,12 +50,13 @@ if(isset($_POST["view"])){
 <br>12-5-1-18-14</p><br>
     <pre><?php echo $row['answer2'];?></pre><br>
     <div class = "text-white bg-dark p-2">3.Decrypt the following message 😭
-        <div><img class='img-fluid' src="../images/3rd question img.png" alt="IMAGE"></div>
+        <div><img class='img-fluid' src="../images/3rd question img.png" alt="IMAGE">
+        <p class='text-center'><b>NTP EMJQCITHOP → Gopal</b></p></div>
     </div>
         <br>
     <pre><?php echo $row['answer3'];?></pre><br>
     <div class = "text-white bg-dark p-2">4.Decrypt the following message 😎
-<br>UM UZNKXY
+<br>UL UZNKXY
 <br>Hint:The number of the most valuable and the least valued thing in a million
         </div><br>
     <pre><?php echo $row['answer4'];?></pre><br>

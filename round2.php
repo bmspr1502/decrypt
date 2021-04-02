@@ -89,6 +89,7 @@
       <div>
         <b>Decrypt the following message 😭</b>
         <img src="images/3rd question img.png" class='img-fluid' alt="IMAGE">
+        <p class='text-center'><b>NTP EMJQCITHOP → Gopal</b></p>
         </div>
           <p id="error3" class="text-white text-center bg-danger"></p>
           <p id="success3" class="text-white text-center bg-success"></p>
@@ -114,7 +115,7 @@
       </div>
       <div class="modal-body">
       <div><b>Decrypt the following message 😎</b>
-<br>UM UZNKXY
+<br>UL UZNKXY
 <br>Hint:The number of the most valuable and the least valued thing in a million
         </div>
           <p id="error4" class="text-white text-center bg-danger"></p>
