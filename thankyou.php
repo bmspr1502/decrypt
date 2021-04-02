@@ -1,6 +1,3 @@
-<?php
-//echo "THANK YOU";
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

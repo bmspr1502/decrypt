@@ -5,7 +5,6 @@ if(isset($_SESSION['kid'])){
 }
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0059)https://preview.colorlib.com/theme/bootstrap/login-form-20/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Decryptit | Login</title>
 <link rel="icon" href="images/logo.png" type="image/icon type">
@@ -35,7 +34,6 @@ $(document).ready(function(){
 <link rel="stylesheet" href = "styleclue.css">
 
 </head>
-<!--<body class="img js-fullheight" style="background-image: url(images/image3.jpg); height: 754px;">-->
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="images/image4.mp4" type="video/mp4">

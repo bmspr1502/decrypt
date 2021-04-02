@@ -1,6 +1,5 @@
 <?php
   session_start();
-  //print_r($_SESSION);
   if(isset($_SESSION['kid'])){
       $kid = $_SESSION['kid'];
 ?>
@@ -237,29 +236,6 @@
   </div>
 </div>
 
-<!-- button type="button" class="butt" data-toggle="modal" onclick="text_load(9)" data-target="#ques9" id="q9"></button>
-<div class="modal fade" id="ques9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Question 9</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>Overfill has been a serious problem facing our city waste facilities for the last decade.By some estimations,our city dumps are an average,30% above capacity in unsanitary,unsafe & unwise position for our city to be in.</div>
-          <p id="error9" class="text-white text-center bg-danger"></p>
-          <p id="success9" class="text-white text-center bg-success"></p>
-          <textarea rows="5" class="form-control" id="answer9"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" onclick="answer_update(9)">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div -->
 
 
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
@@ -298,7 +274,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                  
                     </div>
                   </div>
                 </div>
@@ -319,17 +295,17 @@
 
     var kid = "<?php echo $kid?>";
     var startTime = new Date('<?php echo $_SESSION['start'];?>');
-//var start = '';
 
     function updateClock(){
         let currentTime = new Date ();
         var hours = currentTime.getHours();
         var minutes = currentTime.getMinutes();
-        if (hours ===16 && minutes >=16){
-           //alert('Times Up');
+        /*
+        if (hours >=15 ){
            end();
            return;
         }
+        */
        let elapsedTime = currentTime - startTime;
        let elapsedSec = Math.floor(elapsedTime/1000);
        let elapsedMin = Math.floor(elapsedSec/60);
