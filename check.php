@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     else {
 
-      $sql = "INSERT INTO userdata (kid, name, email, phone, start, endtime) VALUES ('$kid', '$name', '$email', '$phone', CONVERT_TZ(CURRENT_TIMESTAMP(), '+00:00', '+05:30'), CONVERT_TZ(CURRENT_TIMESTAMP(), '+00:00', '+05:30'))";
+      $sql = "INSERT INTO userdata (kid, name, email, phone, start) VALUES ('$kid', '$name', '$email', '$phone', CONVERT_TZ(CURRENT_TIMESTAMP(), '+00:00', '+05:30'))";
       if($con->query($sql))
       {
         echo "New user inserted";
