@@ -270,6 +270,7 @@
                         <li>Marks will be based on correctness as well as time elapsed and difficulty of questions.</li>
                         <li>Malpractice in any forms will not be tolerated.</li>
                         <li>Organiser's decision will be final.</li>
+                        <li><b>Please click end quiz button if you finish the test before 3 pm IST.</b></li>
                       </ol>
                     </div>
                     <div class="modal-footer">
